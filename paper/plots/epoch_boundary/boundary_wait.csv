@@ -1,0 +1,9 @@
+model,transition,boundary_wait_s,inner_median_wait_s,inner_max_wait_s,batches_per_epoch,run
+3D-UNet,1->2,64.702,0.000,36.898,13,3D-UNet-epoch-boundary_20261028_113544
+3D-UNet,2->3,63.529,0.000,36.898,13,3D-UNet-epoch-boundary_20261028_113544
+ResNet-50,1->2,5.554,0.000,0.274,1252,ResNet-50-epoch-boundary_20261028_125220
+ResNet-50,2->3,5.192,0.000,0.274,1252,ResNet-50-epoch-boundary_20261028_125220
+Whisper-small,1->2,1.367,0.000,0.002,446,Whisper-small-epoch-boundary_20261028_114147
+Whisper-small,2->3,1.309,0.000,0.002,446,Whisper-small-epoch-boundary_20261028_114147
+Llama-3.2-1B,1->2,0.029,0.000,0.002,6501,Llama-3.2-1B-epoch-boundary_20261028_115603
+Llama-3.2-1B,2->3,0.019,0.000,0.002,6501,Llama-3.2-1B-epoch-boundary_20261028_115603

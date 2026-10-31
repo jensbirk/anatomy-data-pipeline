@@ -1,0 +1,5 @@
+git_commit: 85f4d94da999060d553b0318b07c0315e0f9cbe0
+git_dirty: false
+name: 3D-UNet-batch-32-train-workers-16-nii.gz-r2
+run_id: 3D-UNet-batch-32-train-workers-16-nii.gz-r2_20261020_113555
+script: trainers/medical_segmentation_throughput.py

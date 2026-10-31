@@ -1,0 +1,3 @@
+name: ResNet-batch-1024-transfer-workers-2
+run_id: ResNet-batch-1024-transfer-workers-2_20260710_150553
+script: trainers/image_classification_throughput.py

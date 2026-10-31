@@ -1,0 +1,98 @@
+runs: 
+  - name: 3D-UNet-batch-32-preprocess-workers-0-nii
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [0]
+      mode: "preprocess"
+      cache_dir: "/raid/datasets/brats/nii"
+      output_dir: "/raid/datasets/brats/nii/checkpoints"
+  - name: 3D-UNet-batch-32-preprocess-workers-2-nii
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [2]
+      mode: "preprocess"
+      cache_dir: "/raid/datasets/brats/nii"
+      output_dir: "/raid/datasets/brats/nii/checkpoints"
+  - name: 3D-UNet-batch-32-preprocess-workers-4-nii
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [4]
+      mode: "preprocess"
+      cache_dir: "/raid/datasets/brats/nii"
+      output_dir: "/raid/datasets/brats/nii/checkpoints"
+  - name: 3D-UNet-batch-32-preprocess-workers-8-nii
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [8]
+      mode: "preprocess"
+      cache_dir: "/raid/datasets/brats/nii"
+      output_dir: "/raid/datasets/brats/nii/checkpoints"
+  - name: 3D-UNet-batch-32-preprocess-workers-16-nii
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [16]
+      mode: "preprocess"
+      cache_dir: "/raid/datasets/brats/nii"
+      output_dir: "/raid/datasets/brats/nii/checkpoints"
+  - name: 3D-UNet-batch-32-preprocess-workers-24-nii
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [24]
+      mode: "preprocess"
+      cache_dir: "/raid/datasets/brats/nii"
+      output_dir: "/raid/datasets/brats/nii/checkpoints"
+  - name: 3D-UNet-batch-32-preprocess-workers-32-nii
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [32]
+      mode: "preprocess"
+      cache_dir: "/raid/datasets/brats/nii"
+      output_dir: "/raid/datasets/brats/nii/checkpoints"
+  - name: 3D-UNet-batch-32-preprocess-workers-48-nii
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [48]
+      mode: "preprocess"
+      cache_dir: "/raid/datasets/brats/nii"
+      output_dir: "/raid/datasets/brats/nii/checkpoints"
+  

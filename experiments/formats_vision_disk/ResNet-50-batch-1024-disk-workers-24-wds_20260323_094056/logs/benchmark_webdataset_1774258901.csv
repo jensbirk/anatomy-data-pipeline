@@ -1,0 +1,2 @@
+num_workers,mode,throughput_img_s,throughput_mb_s
+24,disk,52197.8985,5708.1119

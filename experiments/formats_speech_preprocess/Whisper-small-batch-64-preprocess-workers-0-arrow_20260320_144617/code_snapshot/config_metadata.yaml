@@ -1,0 +1,30 @@
+timestamp: '2026-03-20T14:46:18.127591+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/formats_speech_preprocess/Whisper-small-batch-64-preprocess-workers-0-arrow_20260320_144617/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/formats_speech_preprocess/Whisper-small-batch-64-preprocess-workers-0-arrow_20260320_144617/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/speech_throughput.py
+real_log_output: /home/jbia/project-angel/p1/experiments/formats_speech_preprocess/Whisper-small-batch-64-preprocess-workers-0-arrow_20260320_144617/logs
+config:
+  audio_column: audio
+  batch_size: 64
+  dataset_config: clean
+  dataset_name: librispeech_asr
+  dataset_root: /raid/datasets/librispeech/arrow
+  dataset_split: preprocess
+  dataset_type: arrow
+  epochs: 1
+  eval_split: test
+  freeze_encoder: false
+  language: english
+  lr: 1.0e-05
+  max_steps: 10
+  mode: preprocess
+  model_name: openai/whisper-small
+  num_batches: -1
+  num_workers:
+  - 0
+  prefetch_factor: 2
+  sampling_rate: 16000
+  save_model: false
+  seed: 42
+  text_column: label
+  train_split: preprocess

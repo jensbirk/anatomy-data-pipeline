@@ -1,0 +1,10 @@
+workers,nonshm_gib,shm_gib,run
+0,4.75,2.01,ResNet-50-batch-1024-train-workers-0-jpg_20260512_072559
+1,4.56,2.07,ResNet-50-batch-1024-train-workers-1-jpg_20260512_090402
+2,6.84,4.10,ResNet-50-batch-1024-train-workers-2-jpg_20260512_103150
+4,8.73,9.08,ResNet-50-batch-1024-train-workers-4-jpg_20260512_111707
+8,14.40,16.82,ResNet-50-batch-1024-train-workers-8-jpg_20260512_114022
+16,20.91,32.02,ResNet-50-batch-1024-train-workers-16-jpg_20260512_115314
+24,29.22,44.31,ResNet-50-batch-1024-train-workers-24-jpg_20260512_120614
+32,38.00,58.31,ResNet-50-batch-1024-train-workers-32-jpg_20260512_121922
+48,51.33,85.71,ResNet-50-batch-1024-train-workers-48-jpg_20260512_123237

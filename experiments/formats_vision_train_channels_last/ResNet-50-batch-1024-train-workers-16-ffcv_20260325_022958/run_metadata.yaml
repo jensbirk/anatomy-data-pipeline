@@ -1,0 +1,3 @@
+name: ImageNet-batch-1024-train-workers-16-ffcv
+run_id: ImageNet-batch-1024-train-workers-16-ffcv_20260325_022958
+script: trainers/image_classification_throughput.py

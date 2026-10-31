@@ -1,0 +1,2 @@
+num_workers,mode,throughput_samp_s,throughput_mb_s
+32,disk,18846.4520,4163.9963

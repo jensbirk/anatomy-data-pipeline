@@ -1,0 +1,3 @@
+name: Whisper-small-async-10-r3
+run_id: Whisper-small-async-10-r3_20261019_163027
+script: trainers/speech_throughput.py

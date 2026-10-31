@@ -1,0 +1,3 @@
+name: Llama-3.2-1B-batch-32-train-workers-2
+run_id: Llama-3.2-1B-batch-32-train-workers-2_20260708_125259
+script: trainers/pretrain.py

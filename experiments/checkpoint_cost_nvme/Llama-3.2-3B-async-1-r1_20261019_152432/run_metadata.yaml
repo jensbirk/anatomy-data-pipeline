@@ -1,0 +1,3 @@
+name: Llama-3.2-3B-async-1-r1
+run_id: Llama-3.2-3B-async-1-r1_20261019_152432
+script: trainers/llm_finetune_throughput.py

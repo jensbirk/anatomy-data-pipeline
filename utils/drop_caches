@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Sync filesystem
+sync
+
+# Drop swap
+sudo swapoff -a && sudo swapon -a
+
+# Drop RAM caches
+sudo echo 3 > /proc/sys/vm/drop_caches

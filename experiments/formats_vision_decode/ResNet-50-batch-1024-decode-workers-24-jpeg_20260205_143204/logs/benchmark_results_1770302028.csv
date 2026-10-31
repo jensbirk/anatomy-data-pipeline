@@ -1,0 +1,2 @@
+num_workers,mode,throughput_img_s,throughput_mb_s
+24,decode,16277.7634,609.0698

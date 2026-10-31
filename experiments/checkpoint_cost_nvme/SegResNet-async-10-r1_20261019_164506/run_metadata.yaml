@@ -1,0 +1,3 @@
+name: SegResNet-async-10-r1
+run_id: SegResNet-async-10-r1_20261019_164506
+script: trainers/medical_segmentation_throughput.py

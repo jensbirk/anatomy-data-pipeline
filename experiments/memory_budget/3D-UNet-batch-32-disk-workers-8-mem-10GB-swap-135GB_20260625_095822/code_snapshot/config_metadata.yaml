@@ -1,0 +1,17 @@
+timestamp: '2026-06-25T09:58:22.866328+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/memory_budget/3D-UNet-batch-32-disk-workers-8-mem-10GB-swap-135GB_20260625_095822/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/memory_budget/3D-UNet-batch-32-disk-workers-8-mem-10GB-swap-135GB_20260625_095822/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/medical_segmentation_throughput.py
+real_log_output: /home/jbia/project-angel/p1/experiments/memory_budget/3D-UNet-batch-32-disk-workers-8-mem-10GB-swap-135GB_20260625_095822/logs
+config:
+  batch_size: 32
+  cache_dir: /raid/datasets/brats
+  epochs: 1
+  lr: 0.0001
+  mode: train
+  model: UNet
+  num_batches: -1
+  num_workers:
+  - 8
+  output_dir: /raid/datasets/brats/checkpoints
+  task: Task01_BrainTumour

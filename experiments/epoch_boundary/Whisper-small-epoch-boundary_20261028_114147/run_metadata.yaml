@@ -1,0 +1,5 @@
+git_commit: d1a45ab2aa6075138c7d6da2415b58bb6f925eac
+git_dirty: false
+name: Whisper-small-epoch-boundary
+run_id: Whisper-small-epoch-boundary_20261028_114147
+script: trainers/speech_epoch_boundary.py

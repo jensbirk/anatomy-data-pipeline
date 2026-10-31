@@ -1,0 +1,25 @@
+audio_column: audio
+batch_size: 64
+cache_dir: /raid/datasets/openslr
+dataset_config: clean
+dataset_name: librispeech_asr
+dataset_root: /raid/datasets/librispeech/flac
+dataset_type: flac
+epochs: 1
+eval_split: test
+freeze_encoder: false
+language: english
+lr: 1.0e-05
+max_steps: 10
+mode: decode
+model_name: openai/whisper-small
+num_batches: -1
+num_workers:
+- 8
+output_dir: /raid/datasets/openslr/checkpoints
+prefetch_factor: 2
+sampling_rate: 16000
+save_model: false
+seed: 42
+text_column: text
+train_split: decode.100

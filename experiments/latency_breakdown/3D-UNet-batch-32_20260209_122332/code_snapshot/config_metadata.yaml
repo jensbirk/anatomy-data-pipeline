@@ -1,0 +1,15 @@
+timestamp: '2026-02-09T12:23:33.411609+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/latency_breakdown/3D-UNet-batch-32_20260209_122332/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/latency_breakdown/3D-UNet-batch-32_20260209_122332/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/medical_segmentation_latency.py
+real_log_output: /home/jbia/project-angel/p1/experiments/latency_breakdown/3D-UNet-batch-32_20260209_122332/logs
+config:
+  batch_size: 32
+  cache_dir: /raid/datasets/brats
+  epochs: 1
+  max_steps: 99999999999
+  model: UNet
+  output_dir: /raid/datasets/brats/checkpoints
+  prefetch_factor: null
+  task: Task01_BrainTumour
+  workers: 0

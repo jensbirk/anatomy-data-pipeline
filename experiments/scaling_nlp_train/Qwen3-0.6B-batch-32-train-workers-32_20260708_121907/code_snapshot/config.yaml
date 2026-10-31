@@ -1,0 +1,21 @@
+batch_size: 16
+cache_dir: /raid/datasets/c4/converted/arrow
+data_dir: /raid/datasets/c4/converted/arrow
+epochs: 1
+lr: 2.0e-06
+max_seq_length: 512
+max_steps: 200
+mode: train
+model_name: Qwen/Qwen3-0.6B
+num_batches: -1
+num_workers:
+- 32
+on_the_fly_tokenization: true
+output_dir: /raid/datasets/tatsu-lab/alpaca/checkpoints
+pin_memory: true
+prefetch_factor: 2
+save_model: false
+save_steps: 0
+streaming: false
+torch_compile: false
+warmup_steps: 0

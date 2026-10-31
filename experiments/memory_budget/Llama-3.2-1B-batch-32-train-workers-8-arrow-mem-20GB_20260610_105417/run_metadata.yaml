@@ -1,0 +1,4 @@
+memory_limit_gb: 20
+name: Llama-3.2-1B-batch-32-train-workers-8-arrow-mem-20GB
+run_id: Llama-3.2-1B-batch-32-train-workers-8-arrow-mem-20GB_20260610_105417
+script: trainers/llm_finetune_throughput_filetypes.py

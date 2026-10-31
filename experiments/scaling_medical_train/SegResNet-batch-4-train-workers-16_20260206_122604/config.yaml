@@ -1,0 +1,10 @@
+batch_size: 4
+cache_dir: /raid/datasets/brats
+epochs: 1
+mode: train
+model: SegResNet
+num_batches: -1
+num_workers:
+- 16
+output_dir: /raid/datasets/brats/checkpoints
+task: Task01_BrainTumour

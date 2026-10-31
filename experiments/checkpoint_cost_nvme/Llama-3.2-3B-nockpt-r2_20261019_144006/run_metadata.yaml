@@ -1,0 +1,3 @@
+name: Llama-3.2-3B-nockpt-r2
+run_id: Llama-3.2-3B-nockpt-r2_20261019_144006
+script: trainers/llm_finetune_throughput.py

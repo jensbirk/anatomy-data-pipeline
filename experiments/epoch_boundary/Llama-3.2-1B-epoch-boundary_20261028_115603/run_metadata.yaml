@@ -1,0 +1,5 @@
+git_commit: d1a45ab2aa6075138c7d6da2415b58bb6f925eac
+git_dirty: false
+name: Llama-3.2-1B-epoch-boundary
+run_id: Llama-3.2-1B-epoch-boundary_20261028_115603
+script: trainers/llm_finetune_epoch_boundary.py

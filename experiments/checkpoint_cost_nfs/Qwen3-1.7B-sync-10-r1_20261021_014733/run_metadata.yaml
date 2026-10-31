@@ -1,0 +1,5 @@
+git_commit: 62d303b5faa737bba2f28cc4f83f7e77018ab55d
+git_dirty: false
+name: Qwen3-1.7B-sync-10-r1
+run_id: Qwen3-1.7B-sync-10-r1_20261021_014733
+script: trainers/llm_finetune_throughput.py

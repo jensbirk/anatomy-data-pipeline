@@ -1,0 +1,177 @@
+runs:
+  - name: Whisper-small-batch-64-decode-workers-0
+    script: trainers/speech_throughput.py
+    config:
+      model_name: openai/whisper-small
+      dataset_type: flac
+      dataset_root: /raid/datasets/librispeech/flac
+      audio_column: audio
+      text_column: text
+      language: english
+      cache_dir: /raid/datasets/openslr
+      output_dir: /raid/datasets/openslr/checkpoints
+      batch_size: 64
+      epochs: 1
+      max_steps: -1
+      lr: 1.0e-5
+      seed: 42
+      freeze_encoder: false
+      save_model: false
+      mode: "decode"
+      num_batches: -1
+      prefetch_factor: 2
+      num_workers: [0]
+  - name: Whisper-small-batch-64-decode-workers-2
+    script: trainers/speech_throughput.py
+    config:
+      model_name: openai/whisper-small
+      dataset_type: flac
+      dataset_root: /raid/datasets/librispeech/flac
+      audio_column: audio
+      text_column: text
+      language: english
+      cache_dir: /raid/datasets/openslr
+      output_dir: /raid/datasets/openslr/checkpoints
+      batch_size: 64
+      epochs: 1
+      max_steps: -1
+      lr: 1.0e-5
+      seed: 42
+      freeze_encoder: false
+      save_model: false
+      mode: "decode"
+      num_batches: -1
+      prefetch_factor: 2
+      num_workers: [2]
+  - name: Whisper-small-batch-64-decode-workers-4
+    script: trainers/speech_throughput.py
+    config:
+      model_name: openai/whisper-small
+      dataset_type: flac
+      dataset_root: /raid/datasets/librispeech/flac
+      audio_column: audio
+      text_column: text
+      language: english
+      cache_dir: /raid/datasets/openslr
+      output_dir: /raid/datasets/openslr/checkpoints
+      batch_size: 64
+      epochs: 1
+      max_steps: -1
+      lr: 1.0e-5
+      seed: 42
+      freeze_encoder: false
+      save_model: false
+      mode: "decode"
+      num_batches: -1
+      prefetch_factor: 2
+      num_workers: [4]
+  - name: Whisper-small-batch-64-decode-workers-8
+    script: trainers/speech_throughput.py
+    config:
+      model_name: openai/whisper-small
+      dataset_type: flac
+      dataset_root: /raid/datasets/librispeech/flac
+      audio_column: audio
+      text_column: text
+      language: english
+      cache_dir: /raid/datasets/openslr
+      output_dir: /raid/datasets/openslr/checkpoints
+      batch_size: 64
+      epochs: 1
+      max_steps: -1
+      lr: 1.0e-5
+      seed: 42
+      freeze_encoder: false
+      save_model: false
+      mode: "decode"
+      num_batches: -1
+      prefetch_factor: 2
+      num_workers: [8]
+  - name: Whisper-small-batch-64-decode-workers-16
+    script: trainers/speech_throughput.py
+    config:
+      model_name: openai/whisper-small
+      dataset_type: flac
+      dataset_root: /raid/datasets/librispeech/flac
+      audio_column: audio
+      text_column: text
+      language: english
+      cache_dir: /raid/datasets/openslr
+      output_dir: /raid/datasets/openslr/checkpoints
+      batch_size: 64
+      epochs: 1
+      max_steps: -1
+      lr: 1.0e-5
+      seed: 42
+      freeze_encoder: false
+      save_model: false
+      mode: "decode"
+      num_batches: -1
+      prefetch_factor: 2
+      num_workers: [16]
+  - name: Whisper-small-batch-64-decode-workers-24
+    script: trainers/speech_throughput.py
+    config:
+      model_name: openai/whisper-small
+      dataset_type: flac
+      dataset_root: /raid/datasets/librispeech/flac
+      audio_column: audio
+      text_column: text
+      language: english
+      cache_dir: /raid/datasets/openslr
+      output_dir: /raid/datasets/openslr/checkpoints
+      batch_size: 64
+      epochs: 1
+      max_steps: -1
+      lr: 1.0e-5
+      seed: 42
+      freeze_encoder: false
+      save_model: false
+      mode: "decode"
+      num_batches: -1
+      prefetch_factor: 2
+      num_workers: [24]
+  - name: Whisper-small-batch-64-decode-workers-32
+    script: trainers/speech_throughput.py
+    config:
+      model_name: openai/whisper-small
+      dataset_type: flac
+      dataset_root: /raid/datasets/librispeech/flac
+      audio_column: audio
+      text_column: text
+      language: english
+      cache_dir: /raid/datasets/openslr
+      output_dir: /raid/datasets/openslr/checkpoints
+      batch_size: 64
+      epochs: 1
+      max_steps: -1
+      lr: 1.0e-5
+      seed: 42
+      freeze_encoder: false
+      save_model: false
+      mode: "decode"
+      num_batches: -1
+      prefetch_factor: 2
+      num_workers: [32]
+  - name: Whisper-small-batch-64-decode-workers-48
+    script: trainers/speech_throughput.py
+    config:
+      model_name: openai/whisper-small
+      dataset_type: flac
+      dataset_root: /raid/datasets/librispeech/flac
+      audio_column: audio
+      text_column: text
+      language: english
+      cache_dir: /raid/datasets/openslr
+      output_dir: /raid/datasets/openslr/checkpoints
+      batch_size: 64
+      epochs: 1
+      max_steps: -1
+      lr: 1.0e-5
+      seed: 42
+      freeze_encoder: false
+      save_model: false
+      mode: "decode"
+      num_batches: -1
+      prefetch_factor: 2
+      num_workers: [48]

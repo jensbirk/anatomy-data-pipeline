@@ -1,0 +1,2 @@
+num_workers,mode,throughput_samp_s,elapsed_s
+24,decode,185591.8835,61.44

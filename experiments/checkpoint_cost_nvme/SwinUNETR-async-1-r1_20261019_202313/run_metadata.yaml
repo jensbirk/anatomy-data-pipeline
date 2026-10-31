@@ -1,0 +1,3 @@
+name: SwinUNETR-async-1-r1
+run_id: SwinUNETR-async-1-r1_20261019_202313
+script: trainers/medical_segmentation_throughput.py

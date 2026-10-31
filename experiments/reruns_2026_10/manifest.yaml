@@ -1,0 +1,266 @@
+# Speech +Transfer for Fig. 8, and 3D-UNet NIfTI vs NIfTI-GZ (3 reps,
+# 16 workers) for Table 6 / Section 4.3. Run on Machine 1:
+#   make run experiments/reruns_2026_10
+runs:
+- name: Whisper-small-batch-64-transfer-workers-0
+  script: trainers/speech_throughput.py
+  config:
+    audio_column: audio
+    batch_size: 64
+    cache_dir: /raid/datasets/openslr
+    dataset_root: /raid/datasets/librispeech/flac
+    dataset_type: flac
+    epochs: 1
+    freeze_encoder: false
+    language: english
+    lr: 1.0e-05
+    max_steps: -1
+    mode: transfer
+    model_name: openai/whisper-small
+    num_batches: -1
+    num_workers:
+    - 0
+    output_dir: /raid/datasets/openslr/checkpoints
+    prefetch_factor: 2
+    save_model: false
+    seed: 42
+    text_column: text
+- name: Whisper-small-batch-64-transfer-workers-16
+  script: trainers/speech_throughput.py
+  config:
+    audio_column: audio
+    batch_size: 64
+    cache_dir: /raid/datasets/openslr
+    dataset_root: /raid/datasets/librispeech/flac
+    dataset_type: flac
+    epochs: 1
+    freeze_encoder: false
+    language: english
+    lr: 1.0e-05
+    max_steps: -1
+    mode: transfer
+    model_name: openai/whisper-small
+    num_batches: -1
+    num_workers:
+    - 16
+    output_dir: /raid/datasets/openslr/checkpoints
+    prefetch_factor: 2
+    save_model: false
+    seed: 42
+    text_column: text
+- name: Whisper-small-batch-64-transfer-workers-24
+  script: trainers/speech_throughput.py
+  config:
+    audio_column: audio
+    batch_size: 64
+    cache_dir: /raid/datasets/openslr
+    dataset_root: /raid/datasets/librispeech/flac
+    dataset_type: flac
+    epochs: 1
+    freeze_encoder: false
+    language: english
+    lr: 1.0e-05
+    max_steps: -1
+    mode: transfer
+    model_name: openai/whisper-small
+    num_batches: -1
+    num_workers:
+    - 24
+    output_dir: /raid/datasets/openslr/checkpoints
+    prefetch_factor: 2
+    save_model: false
+    seed: 42
+    text_column: text
+- name: Whisper-small-batch-64-transfer-workers-2
+  script: trainers/speech_throughput.py
+  config:
+    audio_column: audio
+    batch_size: 64
+    cache_dir: /raid/datasets/openslr
+    dataset_root: /raid/datasets/librispeech/flac
+    dataset_type: flac
+    epochs: 1
+    freeze_encoder: false
+    language: english
+    lr: 1.0e-05
+    max_steps: -1
+    mode: transfer
+    model_name: openai/whisper-small
+    num_batches: -1
+    num_workers:
+    - 2
+    output_dir: /raid/datasets/openslr/checkpoints
+    prefetch_factor: 2
+    save_model: false
+    seed: 42
+    text_column: text
+- name: Whisper-small-batch-64-transfer-workers-32
+  script: trainers/speech_throughput.py
+  config:
+    audio_column: audio
+    batch_size: 64
+    cache_dir: /raid/datasets/openslr
+    dataset_root: /raid/datasets/librispeech/flac
+    dataset_type: flac
+    epochs: 1
+    freeze_encoder: false
+    language: english
+    lr: 1.0e-05
+    max_steps: -1
+    mode: transfer
+    model_name: openai/whisper-small
+    num_batches: -1
+    num_workers:
+    - 32
+    output_dir: /raid/datasets/openslr/checkpoints
+    prefetch_factor: 2
+    save_model: false
+    seed: 42
+    text_column: text
+- name: Whisper-small-batch-64-transfer-workers-48
+  script: trainers/speech_throughput.py
+  config:
+    audio_column: audio
+    batch_size: 64
+    cache_dir: /raid/datasets/openslr
+    dataset_root: /raid/datasets/librispeech/flac
+    dataset_type: flac
+    epochs: 1
+    freeze_encoder: false
+    language: english
+    lr: 1.0e-05
+    max_steps: -1
+    mode: transfer
+    model_name: openai/whisper-small
+    num_batches: -1
+    num_workers:
+    - 48
+    output_dir: /raid/datasets/openslr/checkpoints
+    prefetch_factor: 2
+    save_model: false
+    seed: 42
+    text_column: text
+- name: Whisper-small-batch-64-transfer-workers-4
+  script: trainers/speech_throughput.py
+  config:
+    audio_column: audio
+    batch_size: 64
+    cache_dir: /raid/datasets/openslr
+    dataset_root: /raid/datasets/librispeech/flac
+    dataset_type: flac
+    epochs: 1
+    freeze_encoder: false
+    language: english
+    lr: 1.0e-05
+    max_steps: -1
+    mode: transfer
+    model_name: openai/whisper-small
+    num_batches: -1
+    num_workers:
+    - 4
+    output_dir: /raid/datasets/openslr/checkpoints
+    prefetch_factor: 2
+    save_model: false
+    seed: 42
+    text_column: text
+- name: Whisper-small-batch-64-transfer-workers-8
+  script: trainers/speech_throughput.py
+  config:
+    audio_column: audio
+    batch_size: 64
+    cache_dir: /raid/datasets/openslr
+    dataset_root: /raid/datasets/librispeech/flac
+    dataset_type: flac
+    epochs: 1
+    freeze_encoder: false
+    language: english
+    lr: 1.0e-05
+    max_steps: -1
+    mode: transfer
+    model_name: openai/whisper-small
+    num_batches: -1
+    num_workers:
+    - 8
+    output_dir: /raid/datasets/openslr/checkpoints
+    prefetch_factor: 2
+    save_model: false
+    seed: 42
+    text_column: text
+- name: 3D-UNet-batch-32-train-workers-16-nii-r1
+  script: trainers/medical_segmentation_throughput.py
+  config:
+    batch_size: 32
+    cache_dir: /raid/datasets/brats/nii
+    epochs: 1
+    mode: train
+    model: UNet
+    num_batches: -1
+    num_workers:
+    - 16
+    output_dir: /raid/datasets/brats/nii/checkpoints
+    task: Task01_BrainTumour
+- name: 3D-UNet-batch-32-train-workers-16-nii.gz-r1
+  script: trainers/medical_segmentation_throughput.py
+  config:
+    batch_size: 32
+    cache_dir: /raid/datasets/brats
+    epochs: 1
+    mode: train
+    model: UNet
+    num_batches: -1
+    num_workers:
+    - 16
+    output_dir: /raid/datasets/brats/checkpoints
+    task: Task01_BrainTumour
+- name: 3D-UNet-batch-32-train-workers-16-nii-r2
+  script: trainers/medical_segmentation_throughput.py
+  config:
+    batch_size: 32
+    cache_dir: /raid/datasets/brats/nii
+    epochs: 1
+    mode: train
+    model: UNet
+    num_batches: -1
+    num_workers:
+    - 16
+    output_dir: /raid/datasets/brats/nii/checkpoints
+    task: Task01_BrainTumour
+- name: 3D-UNet-batch-32-train-workers-16-nii.gz-r2
+  script: trainers/medical_segmentation_throughput.py
+  config:
+    batch_size: 32
+    cache_dir: /raid/datasets/brats
+    epochs: 1
+    mode: train
+    model: UNet
+    num_batches: -1
+    num_workers:
+    - 16
+    output_dir: /raid/datasets/brats/checkpoints
+    task: Task01_BrainTumour
+- name: 3D-UNet-batch-32-train-workers-16-nii-r3
+  script: trainers/medical_segmentation_throughput.py
+  config:
+    batch_size: 32
+    cache_dir: /raid/datasets/brats/nii
+    epochs: 1
+    mode: train
+    model: UNet
+    num_batches: -1
+    num_workers:
+    - 16
+    output_dir: /raid/datasets/brats/nii/checkpoints
+    task: Task01_BrainTumour
+- name: 3D-UNet-batch-32-train-workers-16-nii.gz-r3
+  script: trainers/medical_segmentation_throughput.py
+  config:
+    batch_size: 32
+    cache_dir: /raid/datasets/brats
+    epochs: 1
+    mode: train
+    model: UNet
+    num_batches: -1
+    num_workers:
+    - 16
+    output_dir: /raid/datasets/brats/checkpoints
+    task: Task01_BrainTumour

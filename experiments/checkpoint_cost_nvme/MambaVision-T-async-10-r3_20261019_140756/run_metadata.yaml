@@ -1,0 +1,3 @@
+name: MambaVision-T-async-10-r3
+run_id: MambaVision-T-async-10-r3_20261019_140756
+script: trainers/image_classification_throughput.py

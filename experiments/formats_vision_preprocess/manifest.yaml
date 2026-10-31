@@ -1,0 +1,399 @@
+runs:
+### PNG
+  - name: ImageNet-batch-1024-preprocess-workers-0-png
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/png"
+      epochs: 1
+      batch_size: 1024
+      persistent_workers: false
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [0]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  - name: ImageNet-batch-1024-preprocess-workers-1-png
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/png"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [1]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  - name: ImageNet-batch-1024-preprocess-workers-2-png
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/png"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [2]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  - name: ImageNet-batch-1024-preprocess-workers-4-png
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/png"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [4]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  - name: ImageNet-batch-1024-preprocess-workers-8-png
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/png"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [8]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  - name: ImageNet-batch-1024-preprocess-workers-16-png
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/png"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [16]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  - name: ImageNet-batch-1024-preprocess-workers-24-png
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/png"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [24]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  - name: ImageNet-batch-1024-preprocess-workers-32-png
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/png"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [32]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  - name: ImageNet-batch-1024-preprocess-workers-48-png
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/png"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [48]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+
+### WebDataset
+  - name: ImageNet-batch-1024-preprocess-workers-0-wds
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/wds"
+      epochs: 1
+      batch_size: 1024
+      persistent_workers: false
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [0]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "webdataset"
+  - name: ImageNet-batch-1024-preprocess-workers-1-wds
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/wds"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [1]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "webdataset"
+  - name: ImageNet-batch-1024-preprocess-workers-2-wds
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/wds"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [2]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "webdataset"
+  - name: ImageNet-batch-1024-preprocess-workers-4-wds
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/wds"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [4]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "webdataset"
+  - name: ImageNet-batch-1024-preprocess-workers-8-wds
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/wds"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [8]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "webdataset"
+  - name: ImageNet-batch-1024-preprocess-workers-16-wds
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/wds"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [16]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "webdataset"
+  - name: ImageNet-batch-1024-preprocess-workers-24-wds
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/wds"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [24]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "webdataset"
+  - name: ImageNet-batch-1024-preprocess-workers-32-wds
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/wds"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [32]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "webdataset"
+  - name: ImageNet-batch-1024-preprocess-workers-48-wds
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/wds"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [48]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "webdataset"
+
+### FFCV
+  - name: ImageNet-batch-1024-preprocess-workers-0-ffcv
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/ffcv"
+      epochs: 1
+      batch_size: 1024
+      persistent_workers: false
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [0]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "ffcv"
+  - name: ImageNet-batch-1024-preprocess-workers-1-ffcv
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/ffcv"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [1]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "ffcv"
+  - name: ImageNet-batch-1024-preprocess-workers-2-ffcv
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/ffcv"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [2]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "ffcv"
+  - name: ImageNet-batch-1024-preprocess-workers-4-ffcv
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/ffcv"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [4]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "ffcv"
+  - name: ImageNet-batch-1024-preprocess-workers-8-ffcv
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/ffcv"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [8]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "ffcv"
+  - name: ImageNet-batch-1024-preprocess-workers-16-ffcv
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/ffcv"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [16]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "ffcv"
+  - name: ImageNet-batch-1024-preprocess-workers-24-ffcv
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/ffcv"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [24]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "ffcv"
+  - name: ImageNet-batch-1024-preprocess-workers-32-ffcv
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/ffcv"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [32]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "ffcv"
+  - name: ImageNet-batch-1024-preprocess-workers-48-ffcv
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/ffcv"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "preprocess" 
+      num_workers: [48]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "ffcv"

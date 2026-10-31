@@ -1,0 +1,5 @@
+git_commit: 62d303b5faa737bba2f28cc4f83f7e77018ab55d
+git_dirty: false
+name: SegResNet-sync-10-r2
+run_id: SegResNet-sync-10-r2_20261021_032508
+script: trainers/medical_segmentation_throughput.py

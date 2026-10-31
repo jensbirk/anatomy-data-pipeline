@@ -1,0 +1,34 @@
+timestamp: '2026-10-21T00:59:07.406055+00:00'
+source_config: /dtu/p1/jebian/anatomy-data-pipeline/experiments/checkpoint_cost_nfs/Whisper-small-async-10-r2_20261021_025906/config.yaml
+snapshot_path: /dtu/p1/jebian/anatomy-data-pipeline/experiments/checkpoint_cost_nfs/Whisper-small-async-10-r2_20261021_025906/code_snapshot/config.yaml
+script: /dtu/p1/jebian/anatomy-data-pipeline/trainers/speech_throughput.py
+real_log_output: /dtu/p1/jebian/anatomy-data-pipeline/experiments/checkpoint_cost_nfs/Whisper-small-async-10-r2_20261021_025906/logs
+config:
+  async_checkpoint: true
+  audio_column: audio
+  batch_size: 64
+  checkpoint_timing: true
+  dataset_config: clean
+  dataset_name: librispeech_asr
+  dataset_root: /dtu/p1/jebian/data/LibriSpeech/train-clean-100/
+  dataset_type: FLAC
+  epochs: 1
+  eval_split: test
+  freeze_encoder: false
+  language: english
+  lr: 1.0e-05
+  max_steps: 120
+  mode: train
+  model_name: openai/whisper-small
+  num_batches: 120
+  num_workers: 8
+  output_dir: /dtu/p1/jebian/checkpoints/librispeech
+  persistent_workers: true
+  prefetch_factor: 2
+  sampling_rate: 16000
+  save_model: false
+  save_steps: 10
+  seed: 42
+  text_column: text
+  timing_warmup_steps: 20
+  train_split: train.100

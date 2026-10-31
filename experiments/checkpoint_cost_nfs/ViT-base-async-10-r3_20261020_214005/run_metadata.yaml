@@ -1,0 +1,5 @@
+git_commit: 62d303b5faa737bba2f28cc4f83f7e77018ab55d
+git_dirty: false
+name: ViT-base-async-10-r3
+run_id: ViT-base-async-10-r3_20261020_214005
+script: trainers/image_classification_throughput.py

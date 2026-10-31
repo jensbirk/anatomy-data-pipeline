@@ -1,0 +1,3 @@
+loader,device,shuffle_GiB,no_shuffle_GiB,amplification
+"map-style (Arrow, no compute)",nvme0n1,377533.621,2726.547,138.466
+iterable + shuffle buffer (JSON),nvme0n1,3.606,3.663,0.984

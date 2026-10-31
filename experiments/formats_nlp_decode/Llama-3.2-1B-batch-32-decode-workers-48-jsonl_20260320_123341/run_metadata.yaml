@@ -1,0 +1,3 @@
+name: Llama-3.2-1B-batch-32-decode-workers-48-jsonl
+run_id: Llama-3.2-1B-batch-32-decode-workers-48-jsonl_20260320_123341
+script: trainers/llm_finetune_throughput_filetypes.py

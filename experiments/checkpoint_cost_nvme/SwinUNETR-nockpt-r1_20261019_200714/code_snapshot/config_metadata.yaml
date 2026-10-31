@@ -1,0 +1,20 @@
+timestamp: '2026-10-19T20:07:14.886775+00:00'
+source_config: /home/jbia/anatomy-data-pipeline-artifact/experiments/checkpoint_cost_nvme/SwinUNETR-nockpt-r1_20261019_200714/config.yaml
+snapshot_path: /home/jbia/anatomy-data-pipeline-artifact/experiments/checkpoint_cost_nvme/SwinUNETR-nockpt-r1_20261019_200714/code_snapshot/config.yaml
+script: /home/jbia/anatomy-data-pipeline-artifact/trainers/medical_segmentation_throughput.py
+real_log_output: /home/jbia/anatomy-data-pipeline-artifact/experiments/checkpoint_cost_nvme/SwinUNETR-nockpt-r1_20261019_200714/logs
+config:
+  async_checkpoint: false
+  batch_size: 1
+  cache_dir: /raid/datasets/brats
+  checkpoint_timing: true
+  epochs: 1
+  max_steps: 120
+  mode: train
+  model: SwinUNETR
+  num_batches: 120
+  num_workers: 8
+  output_dir: /raid/checkpoints/brats
+  save_steps: 0
+  task: Task01_BrainTumour
+  timing_warmup_steps: 20

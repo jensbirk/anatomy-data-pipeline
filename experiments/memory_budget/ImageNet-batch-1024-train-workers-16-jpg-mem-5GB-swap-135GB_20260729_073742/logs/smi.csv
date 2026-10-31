@@ -1,0 +1,3 @@
+timestamp,utilization.gpu [%], utilization.memory [%], power.draw [W], memory.used [MiB], temperature.gpu
+1785310673.4717753,0, 0, 83.24, 30745, 39
+1785310674.4719844,0, 0, 83.30, 30745, 39

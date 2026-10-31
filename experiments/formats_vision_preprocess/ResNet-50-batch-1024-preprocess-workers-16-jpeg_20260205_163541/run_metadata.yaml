@@ -1,0 +1,3 @@
+name: ResNet-batch-1024-preprocess-workers-16
+run_id: ResNet-batch-1024-preprocess-workers-16_20260205_163541
+script: trainers/image_classification_throughput.py

@@ -1,0 +1,3 @@
+name: SegResNet-batch-4
+run_id: SegResNet-batch-4_20260209_124440
+script: trainers/medical_segmentation_latency.py

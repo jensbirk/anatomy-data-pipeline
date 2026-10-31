@@ -1,0 +1,3 @@
+name: Whisper-small-nockpt-r1
+run_id: Whisper-small-nockpt-r1_20261019_161559
+script: trainers/speech_throughput.py

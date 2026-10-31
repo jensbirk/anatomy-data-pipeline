@@ -1,0 +1,46 @@
+#!/bin/bash
+# Checkpoint-cost runs on the DTU P1 cluster (Machine 2):
+# data and checkpoints on /dtu/p1 (NFS). Submit from the repo root:
+#   bsub < experiments/checkpoint_cost_nfs/submit.lsf
+#BSUB -J ckpt_cost_nfs
+#BSUB -q p1
+# One GPU and half a node: the trainer uses one GPU and 8 dataloader workers;
+# peak host memory is about 141 GiB (UNet). The NFS server is shared by the
+# cluster either way; each run is compared with its own model's no-checkpoint
+# baseline, and the 3 repetitions show the remaining run-to-run spread.
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -n 32
+#BSUB -R "span[hosts=1] rusage[mem=7GB]"
+#BSUB -W 72:00
+#BSUB -o experiments/checkpoint_cost_nfs/lsf_%J.out
+#BSUB -e experiments/checkpoint_cost_nfs/lsf_%J.err
+# defines `module` in batch shells; must come before `set -e`, since a command
+# inside the cluster's /etc/profile returns non-zero
+source /etc/profile
+set -euo pipefail
+
+export PATH="$HOME/.local/bin:$PATH"
+export HF_HOME=/dtu/p1/jebian/hf_cache        # Hugging Face token and model cache
+# Python environment and package cache on the node's local disk: the /dtu/p1
+# quota holds the datasets and checkpoints (the NFS under test) and has no room
+# for a ~15 GB environment; home has a 30 GB quota.
+LOCAL="${TMPDIR:-/tmp}/ckpt_cost_${LSB_JOBID:-$$}"
+mkdir -p "$LOCAL"
+export UV_CACHE_DIR="$LOCAL/uv_cache" UV_PROJECT_ENVIRONMENT="$LOCAL/venv" UV_LINK_MODE=copy
+EXP=experiments/checkpoint_cost_nfs
+
+echo "LSF job ${LSB_JOBID:-} on $(hostname)"
+nvidia-smi -L
+df -h "$LOCAL" /dtu/p1/jebian
+if [ "$(df --output=avail -BG "$LOCAL" | tail -1 | tr -dc 0-9)" -lt 30 ]; then
+    echo "Less than 30 GB free on the node's local disk ($LOCAL); stopping."
+    exit 1
+fi
+
+uv sync
+# MambaVision needs mamba_ssm, compiled against the installed torch (not in
+# the lock file because it must build against it); requires nvcc.
+set +u; module load cuda/13.1.1; set -u   # torch is built for CUDA 13.0; module scripts are not set -u safe
+export CUDA_HOME="${CUDA_HOME:-$(dirname "$(dirname "$(command -v nvcc)")")}"
+uv pip install --python "$UV_PROJECT_ENVIRONMENT/bin/python" --no-build-isolation mamba-ssm==2.3.2.post1
+make run "$EXP"

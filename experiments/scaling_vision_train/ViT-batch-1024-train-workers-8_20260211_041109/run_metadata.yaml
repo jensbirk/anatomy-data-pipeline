@@ -1,0 +1,3 @@
+name: ViT-batch-1024-train-workers-8
+run_id: ViT-batch-1024-train-workers-8_20260211_041109
+script: trainers/image_classification_throughput.py

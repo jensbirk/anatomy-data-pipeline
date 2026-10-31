@@ -1,0 +1,16 @@
+timestamp: '2026-02-09T12:53:38.525538+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/latency_breakdown/ResNet-batch-1024_20260209_125337/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/latency_breakdown/ResNet-batch-1024_20260209_125337/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/image_classification_latency.py
+real_log_output: /home/jbia/project-angel/p1/experiments/latency_breakdown/ResNet-batch-1024_20260209_125337/logs
+config:
+  batch_size: 1024
+  data_dir: /raid/tensio/imagenet/full/imagefolder
+  epochs: 1
+  learning_rate: 0.01
+  max_steps: 99999999999
+  model_name: microsoft/resnet-50
+  output_dir: /raid/datasets/ILSVRC/imagenet-1k/checkpoints
+  prefetch_factor: null
+  val_split: 0.1
+  workers: 0

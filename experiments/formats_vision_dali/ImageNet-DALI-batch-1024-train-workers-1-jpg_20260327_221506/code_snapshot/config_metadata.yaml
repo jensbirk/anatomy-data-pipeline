@@ -1,0 +1,19 @@
+timestamp: '2026-03-27T22:15:19.813834+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/image_classification_DALI/ImageNet-DALI-batch-1024-train-workers-1-jpg_20260327_221506/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/image_classification_DALI/ImageNet-DALI-batch-1024-train-workers-1-jpg_20260327_221506/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/image_classification_throughput_DALI.py
+real_log_output: /home/jbia/project-angel/p1/experiments/image_classification_DALI/ImageNet-DALI-batch-1024-train-workers-1-jpg_20260327_221506/logs
+config:
+  batch_size: 1024
+  data_dir: /raid/datasets/imagenet-1k/jpg
+  dataset_type: dali
+  epochs: 1
+  mode: train
+  model_name: microsoft/resnet-50
+  num_batches: -1
+  num_workers:
+  - 1
+  output_dir: /raid/datasets/ILSVRC/imagenet-1k/checkpoints
+  persistent_workers: true
+  pin_memory: true
+  prefetch_factor: 2

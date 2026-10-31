@@ -1,0 +1,3 @@
+name: Whisper-small-batch-64-transfer-workers-0
+run_id: Whisper-small-batch-64-transfer-workers-0_20260209_110154
+script: trainers/speech_throughput.py

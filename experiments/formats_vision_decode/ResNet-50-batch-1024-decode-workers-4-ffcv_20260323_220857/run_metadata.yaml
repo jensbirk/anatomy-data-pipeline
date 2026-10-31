@@ -1,0 +1,3 @@
+name: ImageNet-batch-1024-decode-workers-4-ffcv
+run_id: ImageNet-batch-1024-decode-workers-4-ffcv_20260323_220857
+script: trainers/image_classification_throughput.py

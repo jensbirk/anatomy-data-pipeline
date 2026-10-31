@@ -1,0 +1,14 @@
+async_checkpoint: true
+batch_size: 1
+cache_dir: /raid/datasets/brats
+checkpoint_timing: true
+epochs: 1
+max_steps: 120
+mode: train
+model: SwinUNETR
+num_batches: 120
+num_workers: 8
+output_dir: /raid/checkpoints/brats
+save_steps: 10
+task: Task01_BrainTumour
+timing_warmup_steps: 20

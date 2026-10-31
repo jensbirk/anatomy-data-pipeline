@@ -1,0 +1,3 @@
+name: SegResNet-nockpt-r1
+run_id: SegResNet-nockpt-r1_20261019_163445
+script: trainers/medical_segmentation_throughput.py

@@ -1,0 +1,17 @@
+async_checkpoint: true
+batch_size: 1024
+checkpoint_timing: true
+data_dir: /dtu/p1/jebian/data/train/
+dataset_name: imagenet-1k
+epochs: 1
+max_steps: 120
+mode: train
+model_name: microsoft/resnet-50
+num_batches: 120
+num_workers: 8
+output_dir: /dtu/p1/jebian/checkpoints/imagenet
+persistent_workers: true
+pin_memory: true
+prefetch_factor: 2
+save_steps: 10
+timing_warmup_steps: 20

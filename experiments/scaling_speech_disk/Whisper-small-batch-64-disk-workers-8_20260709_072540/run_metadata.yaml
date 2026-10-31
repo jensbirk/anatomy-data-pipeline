@@ -1,0 +1,3 @@
+name: Whisper-small-batch-64-disk-workers-8
+run_id: Whisper-small-batch-64-disk-workers-8_20260709_072540
+script: trainers/speech_throughput.py

@@ -1,0 +1,3 @@
+name: 3D-UNet-batch-32-disk-workers-32-nii
+run_id: 3D-UNet-batch-32-disk-workers-32-nii_20260330_073920
+script: trainers/medical_segmentation_throughput.py

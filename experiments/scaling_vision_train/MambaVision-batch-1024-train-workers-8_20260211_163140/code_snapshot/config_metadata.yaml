@@ -1,0 +1,19 @@
+timestamp: '2026-02-11T16:31:49.266082+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/image_classification_throughput_train/MambaVision-batch-1024-train-workers-8_20260211_163140/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/image_classification_throughput_train/MambaVision-batch-1024-train-workers-8_20260211_163140/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/image_classification_throughput.py
+real_log_output: /home/jbia/project-angel/p1/experiments/image_classification_throughput_train/MambaVision-batch-1024-train-workers-8_20260211_163140/logs
+config:
+  batch_size: 1024
+  data_dir: /raid/tensio/imagenet/full/imagefolder
+  epochs: 1
+  learning_rate: 0.0002
+  mode: train
+  model_name: nvidia/MambaVision-T-1K
+  num_batches: -1
+  num_workers:
+  - 8
+  output_dir: /raid/datasets/ILSVRC/imagenet-1k/checkpoints
+  persistent_workers: true
+  pin_memory: true
+  prefetch_factor: 2

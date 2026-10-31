@@ -1,0 +1,3 @@
+name: SegResNet-batch-4-preprocess-workers-8
+run_id: SegResNet-batch-4-preprocess-workers-8_20260206_113505
+script: trainers/medical_segmentation_throughput.py

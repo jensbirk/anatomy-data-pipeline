@@ -1,0 +1,3 @@
+name: UNet-sync-10-r1
+run_id: UNet-sync-10-r1_20261019_175828
+script: trainers/medical_segmentation_throughput.py

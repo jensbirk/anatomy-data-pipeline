@@ -1,0 +1,27 @@
+timestamp: '2026-08-31T08:21:58.558573+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/pretrain_disk/Qwen3-1.7B-batch-32-disk-workers-16_20260831_082149/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/pretrain_disk/Qwen3-1.7B-batch-32-disk-workers-16_20260831_082149/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/pretrain.py
+real_log_output: /home/jbia/project-angel/p1/experiments/pretrain_disk/Qwen3-1.7B-batch-32-disk-workers-16_20260831_082149/logs
+config:
+  batch_size: 32
+  cache_dir: /raid/datasets/c4/converted/arrow
+  data_dir: /raid/datasets/c4/converted/arrow
+  epochs: 1
+  lr: 2.0e-06
+  max_samples: null
+  max_seq_length: 512
+  mode: disk
+  model_name: Qwen/Qwen3-1.7B
+  num_batches: -1
+  num_workers:
+  - 16
+  on_the_fly_tokenization: true
+  output_dir: /raid/datasets/tatsu-lab/alpaca/checkpoints
+  pin_memory: true
+  prefetch_factor: 2
+  save_model: false
+  save_steps: 0
+  streaming: false
+  torch_compile: false
+  warmup_steps: 0

@@ -1,0 +1,3 @@
+name: ResNet-batch-1024
+run_id: ResNet-batch-1024_20260209_125337
+script: trainers/image_classification_latency.py

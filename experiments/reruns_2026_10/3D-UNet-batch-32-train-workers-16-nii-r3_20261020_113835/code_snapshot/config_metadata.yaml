@@ -1,0 +1,16 @@
+timestamp: '2026-10-20T11:38:36.102308+00:00'
+source_config: /home/jbia/anatomy-data-pipeline-artifact/experiments/reruns_2026_10_medical/3D-UNet-batch-32-train-workers-16-nii-r3_20261020_113835/config.yaml
+snapshot_path: /home/jbia/anatomy-data-pipeline-artifact/experiments/reruns_2026_10_medical/3D-UNet-batch-32-train-workers-16-nii-r3_20261020_113835/code_snapshot/config.yaml
+script: /home/jbia/anatomy-data-pipeline-artifact/trainers/medical_segmentation_throughput.py
+real_log_output: /home/jbia/anatomy-data-pipeline-artifact/experiments/reruns_2026_10_medical/3D-UNet-batch-32-train-workers-16-nii-r3_20261020_113835/logs
+config:
+  batch_size: 32
+  cache_dir: /raid/datasets/brats/nii
+  epochs: 1
+  mode: train
+  model: UNet
+  num_batches: -1
+  num_workers:
+  - 16
+  output_dir: /raid/datasets/brats/nii/checkpoints
+  task: Task01_BrainTumour

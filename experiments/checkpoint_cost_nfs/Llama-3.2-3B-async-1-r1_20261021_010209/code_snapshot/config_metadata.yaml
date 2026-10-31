@@ -1,0 +1,27 @@
+timestamp: '2026-10-20T23:02:09.813597+00:00'
+source_config: /dtu/p1/jebian/anatomy-data-pipeline/experiments/checkpoint_cost_nfs/Llama-3.2-3B-async-1-r1_20261021_010209/config.yaml
+snapshot_path: /dtu/p1/jebian/anatomy-data-pipeline/experiments/checkpoint_cost_nfs/Llama-3.2-3B-async-1-r1_20261021_010209/code_snapshot/config.yaml
+script: /dtu/p1/jebian/anatomy-data-pipeline/trainers/llm_finetune_throughput.py
+real_log_output: /dtu/p1/jebian/anatomy-data-pipeline/experiments/checkpoint_cost_nfs/Llama-3.2-3B-async-1-r1_20261021_010209/logs
+config:
+  async_checkpoint: true
+  batch_size: 16
+  cache_dir: /dtu/p1/jebian/data/alpaca/arrow/
+  checkpoint_timing: true
+  data_dir: null
+  dataset_name: tatsu-lab/alpaca
+  epochs: 1
+  lr: 2.0e-06
+  max_seq_length: 512
+  max_steps: 30
+  mode: train
+  model_name: meta-llama/Llama-3.2-3B
+  num_batches: 30
+  num_workers: 8
+  output_dir: /dtu/p1/jebian/checkpoints/alpaca
+  pin_memory: true
+  save_steps: 1
+  streaming: false
+  timing_warmup_steps: 20
+  torch_compile: false
+  warmup_steps: 0

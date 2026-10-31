@@ -1,0 +1,21 @@
+Run: Llama-3.2-1B-no_ops_3epochs_no_shuffle_20251224
+Source: dio/experiments/llm_finetune_no_ops_c4_epochs/Llama-3.2-1B-no_ops_3epochs_no_shuffle_20251224_014450/logs/vmstat.csv
+Excluded Start: 0s
+
+--- System Wide Statistics ---
+  Analyzed Duration: 154355.53 s
+
+  [Memory/Swap]
+  Total Swap In:  15569.01 MB
+  Total Swap Out: 21495.04 MB
+
+  [Block I/O]
+  Total Blocks In:  2815395.35 MB
+  Total Blocks Out: 25890.98 MB
+
+  [CPU Averages]
+  Avg User: 6.94%
+  Avg System: 1.11%
+  Avg Idle: 91.70%
+  Avg Wait: 0.01%
+  Avg Steal: 0.00%

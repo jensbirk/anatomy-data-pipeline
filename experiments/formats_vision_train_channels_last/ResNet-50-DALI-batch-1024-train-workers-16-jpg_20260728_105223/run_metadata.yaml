@@ -1,0 +1,3 @@
+name: ImageNet-DALI-batch-1024-train-workers-16-jpg
+run_id: ImageNet-DALI-batch-1024-train-workers-16-jpg_20260728_105223
+script: trainers/image_classification_throughput_DALI.py

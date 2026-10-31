@@ -1,0 +1,12 @@
+model,params_m,dtype,size_mib,batch
+Llama-3.2-1B,1235.8,bf16,2357.1,32
+Llama-3.2-3B,3212.7,bf16,6127.8,16
+Qwen3-0.6B,596.0,bf16,1136.9,32
+Qwen3-1.7B,1720.6,bf16,3281.7,16
+ResNet-50,25.6,fp32,97.5,1024
+ViT,86.6,fp32,330.2,1024
+MambaVision,31.8,fp32,121.3,1024
+3D-UNet,4.8,fp32,18.3,32
+SwinUNETR,62.2,fp32,237.2,1
+SegResNet,4.7,fp32,17.9,4
+Whisper-small,241.7,fp32,922.1,64

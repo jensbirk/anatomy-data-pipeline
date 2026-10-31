@@ -1,0 +1,4 @@
+memory_limit_gb: 30
+name: Whisper-small-batch-64-train-workers-8-flac-mem-30GB
+run_id: Whisper-small-batch-64-train-workers-8-flac-mem-30GB_20260615_123911
+script: trainers/speech_throughput.py

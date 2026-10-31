@@ -1,0 +1,16 @@
+timestamp: '2026-07-09T14:40:21.746443+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/medical_segmentation_throughput_train/3D-UNet-batch-32-train-workers-8_20260709_144021/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/medical_segmentation_throughput_train/3D-UNet-batch-32-train-workers-8_20260709_144021/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/medical_segmentation_throughput.py
+real_log_output: /home/jbia/project-angel/p1/experiments/medical_segmentation_throughput_train/3D-UNet-batch-32-train-workers-8_20260709_144021/logs
+config:
+  batch_size: 32
+  cache_dir: /raid/datasets/brats
+  epochs: 1
+  mode: train
+  model: UNet
+  num_batches: -1
+  num_workers:
+  - 8
+  output_dir: /raid/datasets/brats/checkpoints
+  task: Task01_BrainTumour

@@ -1,0 +1,5 @@
+git_commit: 62d303b5faa737bba2f28cc4f83f7e77018ab55d
+git_dirty: false
+name: UNet-nockpt-r2
+run_id: UNet-nockpt-r2_20261021_035439
+script: trainers/medical_segmentation_throughput.py

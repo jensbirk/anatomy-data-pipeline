@@ -1,0 +1,368 @@
+  runs:
+  - name: ResNet-batch-1024-transfer-workers-0
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/jpg"
+      dataset_type: "jpeg"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  # -1 means all batches
+      mode: "transfer"
+      num_workers: [0]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints" 
+  - name: ResNet-batch-1024-transfer-workers-2
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/jpg"
+      dataset_type: "jpeg"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "transfer" 
+      num_workers: [2]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints" 
+  - name: ResNet-batch-1024-transfer-workers-4
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/jpg"
+      dataset_type: "jpeg"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "transfer" 
+      num_workers: [4]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  - name: ResNet-batch-1024-transfer-workers-8
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/jpg"
+      dataset_type: "jpeg"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "transfer" 
+      num_workers: [8]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  - name: ResNet-batch-1024-transfer-workers-16
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/jpg"
+      dataset_type: "jpeg"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "transfer" 
+      num_workers: [16]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  - name: ResNet-batch-1024-transfer-workers-24
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/jpg"
+      dataset_type: "jpeg"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "transfer" 
+      num_workers: [24]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  - name: ResNet-batch-1024-transfer-workers-32
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/jpg"
+      dataset_type: "jpeg"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "transfer"
+      num_workers: [32]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  - name: ResNet-batch-1024-transfer-workers-48
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/jpg"
+      dataset_type: "jpeg"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "transfer" 
+      num_workers: [48]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+
+
+  ### ViT
+  # - name: ViT-batch-1024-transfer-workers-0
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "google/vit-base-patch16-224"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     learning_rate: 2.0e-4
+  #     prefetch_factor: 2
+  #     persistent_workers: true
+  #     pin_memory: true
+  #     num_batches: -1  # -1 means all batches
+  #     mode: "transfer" # "transfer", "transfer", "transfer", "transfer", "train", "all"
+  #     num_workers: [0]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints" 
+  # - name: ViT-batch-1024-transfer-workers-2
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "google/vit-base-patch16-224"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     prefetch_factor: 2
+  #     learning_rate: 2.0e-4
+  #     persistent_workers: true
+  #     pin_memory: true
+  #     num_batches: -1  
+  #     mode: "transfer" 
+  #     num_workers: [2]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints" 
+  # - name: ViT-batch-1024-transfer-workers-4
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "google/vit-base-patch16-224"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     learning_rate: 2.0e-4
+  #     prefetch_factor: 2
+  #     persistent_workers: true
+  #     pin_memory: true
+  #     num_batches: -1  
+  #     mode: "transfer" 
+  #     num_workers: [4]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  # - name: ViT-batch-1024-transfer-workers-8
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "google/vit-base-patch16-224"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     learning_rate: 2.0e-4
+  #     prefetch_factor: 2
+  #     persistent_workers: true
+  #     pin_memory: true
+  #     num_batches: -1  
+  #     mode: "transfer" 
+  #     num_workers: [8]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  # - name: ViT-batch-1024-transfer-workers-16
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "google/vit-base-patch16-224"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     learning_rate: 2.0e-4
+  #     prefetch_factor: 2
+  #     persistent_workers: true
+  #     pin_memory: true
+  #     num_batches: -1  
+  #     mode: "transfer" 
+  #     num_workers: [16]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  # - name: ViT-batch-1024-transfer-workers-24
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "google/vit-base-patch16-224"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     prefetch_factor: 2
+  #     persistent_workers: true
+  #     learning_rate: 2.0e-4
+  #     pin_memory: true
+  #     num_batches: -1  
+  #     mode: "transfer" 
+  #     num_workers: [24]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  # - name: ViT-batch-1024-transfer-workers-32
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "google/vit-base-patch16-224"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     prefetch_factor: 2
+  #     persistent_workers: true
+  #     learning_rate: 2.0e-4
+  #     pin_memory: true
+  #     num_batches: -1  
+  #     mode: "transfer"
+  #     num_workers: [32]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  # - name: ViT-batch-1024-transfer-workers-48
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "google/vit-base-patch16-224"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     prefetch_factor: 2
+  #     learning_rate: 2.0e-4
+  #     persistent_workers: true
+  #     pin_memory: true
+  #     num_batches: -1  
+  #     mode: "transfer" 
+  #     num_workers: [48]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+
+
+  #   ### Mamba vision 
+
+  # - name: MambaVision-batch-1024-transfer-workers-0
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "nvidia/MambaVision-T-1K"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     learning_rate: 2.0e-4
+  #     prefetch_factor: 2
+  #     persistent_workers: true
+  #     pin_memory: true
+  #     num_batches: -1  # -1 means all batches
+  #     mode: "transfer" # "transfer", "transfer", "transfer", "transfer", "train", "all"
+  #     num_workers: [0]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints" 
+  # - name: MambaVision-batch-1024-transfer-workers-2
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "nvidia/MambaVision-T-1K"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     prefetch_factor: 2
+  #     learning_rate: 2.0e-4
+  #     persistent_workers: true
+  #     pin_memory: true
+  #     num_batches: -1  
+  #     mode: "transfer" 
+  #     num_workers: [2]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints" 
+  # - name: MambaVision-batch-1024-transfer-workers-4
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "nvidia/MambaVision-T-1K"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     learning_rate: 2.0e-4
+  #     prefetch_factor: 2
+  #     persistent_workers: true
+  #     pin_memory: true
+  #     num_batches: -1  
+  #     mode: "transfer" 
+  #     num_workers: [4]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  # - name: MambaVision-batch-1024-transfer-workers-8
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "nvidia/MambaVision-T-1K"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     learning_rate: 2.0e-4
+  #     prefetch_factor: 2
+  #     persistent_workers: true
+  #     pin_memory: true
+  #     num_batches: -1  
+  #     mode: "transfer" 
+  #     num_workers: [8]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  # - name: MambaVision-batch-1024-transfer-workers-16
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "nvidia/MambaVision-T-1K"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     learning_rate: 2.0e-4
+  #     prefetch_factor: 2
+  #     persistent_workers: true
+  #     pin_memory: true
+  #     num_batches: -1  
+  #     mode: "transfer" 
+  #     num_workers: [16]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  # - name: MambaVision-batch-1024-transfer-workers-24
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "nvidia/MambaVision-T-1K"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     prefetch_factor: 2
+  #     persistent_workers: true
+  #     learning_rate: 2.0e-4
+  #     pin_memory: true
+  #     num_batches: -1  
+  #     mode: "transfer" 
+  #     num_workers: [24]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  # - name: MambaVision-batch-1024-transfer-workers-32
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "nvidia/MambaVision-T-1K"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     prefetch_factor: 2
+  #     persistent_workers: true
+  #     learning_rate: 2.0e-4
+  #     pin_memory: true
+  #     num_batches: -1  
+  #     mode: "transfer"
+  #     num_workers: [32]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+  # - name: MambaVision-batch-1024-transfer-workers-48
+  #   script: trainers/image_classification_throughput.py
+  #   config:
+  #     model_name: "nvidia/MambaVision-T-1K"
+  #     data_dir: "/raid/tensio/imagenet/full/imagefolder"
+  #     epochs: 1
+  #     batch_size: 1024
+  #     prefetch_factor: 2
+  #     learning_rate: 2.0e-4
+  #     persistent_workers: true
+  #     pin_memory: true
+  #     num_batches: -1  
+  #     mode: "transfer" 
+  #     num_workers: [48]
+  #     output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"

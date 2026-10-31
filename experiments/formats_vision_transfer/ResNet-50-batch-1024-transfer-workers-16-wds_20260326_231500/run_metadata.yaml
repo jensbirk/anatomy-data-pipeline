@@ -1,0 +1,3 @@
+name: ImageNet-batch-1024-transfer-workers-16-wds
+run_id: ImageNet-batch-1024-transfer-workers-16-wds_20260326_231500
+script: trainers/image_classification_throughput.py

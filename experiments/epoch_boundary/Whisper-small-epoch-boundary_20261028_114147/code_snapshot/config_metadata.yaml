@@ -1,0 +1,19 @@
+timestamp: '2026-10-28T11:41:47.835716+00:00'
+source_config: /home/jbia/anatomy-data-pipeline-artifact/experiments/epoch_boundary_persistent/Whisper-small-epoch-boundary_20261028_114147/config.yaml
+snapshot_path: /home/jbia/anatomy-data-pipeline-artifact/experiments/epoch_boundary_persistent/Whisper-small-epoch-boundary_20261028_114147/code_snapshot/config.yaml
+script: /home/jbia/anatomy-data-pipeline-artifact/trainers/speech_epoch_boundary.py
+real_log_output: /home/jbia/anatomy-data-pipeline-artifact/experiments/epoch_boundary_persistent/Whisper-small-epoch-boundary_20261028_114147/logs
+config:
+  batch_size: 64
+  dataset_root: /raid/datasets/librispeech/flac
+  dataset_type: flac
+  epochs: 3
+  freeze_encoder: false
+  language: english
+  lr: 1.0e-05
+  model_name: openai/whisper-small
+  num_batches: -1
+  num_workers: 8
+  output_dir: /raid/datasets/librispeech/flac/epoch_boundary_persistent
+  persistent_workers: true
+  sampling_rate: 16000

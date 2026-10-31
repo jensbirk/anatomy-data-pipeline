@@ -1,0 +1,20 @@
+timestamp: '2026-10-19T17:39:01.637540+00:00'
+source_config: /home/jbia/anatomy-data-pipeline-artifact/experiments/checkpoint_cost_nvme/UNet-nockpt-r3_20261019_173900/config.yaml
+snapshot_path: /home/jbia/anatomy-data-pipeline-artifact/experiments/checkpoint_cost_nvme/UNet-nockpt-r3_20261019_173900/code_snapshot/config.yaml
+script: /home/jbia/anatomy-data-pipeline-artifact/trainers/medical_segmentation_throughput.py
+real_log_output: /home/jbia/anatomy-data-pipeline-artifact/experiments/checkpoint_cost_nvme/UNet-nockpt-r3_20261019_173900/logs
+config:
+  async_checkpoint: false
+  batch_size: 32
+  cache_dir: /raid/datasets/brats
+  checkpoint_timing: true
+  epochs: 10
+  max_steps: 12
+  mode: train
+  model: UNet
+  num_batches: 12
+  num_workers: 8
+  output_dir: /raid/checkpoints/brats
+  save_steps: 0
+  task: Task01_BrainTumour
+  timing_warmup_steps: 20

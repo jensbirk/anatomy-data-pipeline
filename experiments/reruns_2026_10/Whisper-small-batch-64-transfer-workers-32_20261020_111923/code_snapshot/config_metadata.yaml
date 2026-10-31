@@ -1,0 +1,26 @@
+timestamp: '2026-10-20T11:19:24.258883+00:00'
+source_config: /home/jbia/anatomy-data-pipeline-artifact/experiments/reruns_2026_10_speech/Whisper-small-batch-64-transfer-workers-32_20261020_111923/config.yaml
+snapshot_path: /home/jbia/anatomy-data-pipeline-artifact/experiments/reruns_2026_10_speech/Whisper-small-batch-64-transfer-workers-32_20261020_111923/code_snapshot/config.yaml
+script: /home/jbia/anatomy-data-pipeline-artifact/trainers/speech_throughput.py
+real_log_output: /home/jbia/anatomy-data-pipeline-artifact/experiments/reruns_2026_10_speech/Whisper-small-batch-64-transfer-workers-32_20261020_111923/logs
+config:
+  audio_column: audio
+  batch_size: 64
+  cache_dir: /raid/datasets/openslr
+  dataset_root: /raid/datasets/librispeech/flac
+  dataset_type: flac
+  epochs: 1
+  freeze_encoder: false
+  language: english
+  lr: 1.0e-05
+  max_steps: -1
+  mode: transfer
+  model_name: openai/whisper-small
+  num_batches: -1
+  num_workers:
+  - 32
+  output_dir: /raid/datasets/openslr/checkpoints
+  prefetch_factor: 2
+  save_model: false
+  seed: 42
+  text_column: text

@@ -1,0 +1,3 @@
+name: Llama-3.2-1B-no_ops_3epochs_shuffle
+run_id: Llama-3.2-1B-no_ops_3epochs_shuffle_20251222_121558
+script: trainers/pretrain.py

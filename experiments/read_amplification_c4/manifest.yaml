@@ -1,0 +1,98 @@
+runs: 
+# run with no ops 3 epochs shuffle
+  # - name: Llama-3.2-1B-no_ops_3epochs_shuffle
+  #   script: trainers/pretrain.py
+  #   config:
+  #     model_name: meta-llama/Llama-3.2-1B
+  #     dataset_name: allenai/c4
+  #     data_dir: en
+  #     output_dir: /raid/datasets/allenai/c4/checkpoints
+  #     max_steps: null
+  #     max_samples: null      
+  #     batch_size: 8
+  #     epochs: 3
+  #     lr: 2.0e-5
+  #     warmup_steps: 0
+  #     max_seq_length: 512
+  #     save_steps: 0
+  #     save_model: false
+  #     force_flush: false
+  #     pin_memory: true
+  #     profile: false
+  #     profile_steps: 10
+  #     force_retokenize: false
+  #     streaming: false
+  #     no_ops: true
+  #     shuffle: true
+  # - name: Llama-3.2-1B-no_ops_3epochs_no_shuffle
+  #   script: trainers/pretrain.py
+  #   config:
+  #     model_name: meta-llama/Llama-3.2-1B
+  #     dataset_name: allenai/c4
+  #     data_dir: en
+  #     output_dir: /raid/datasets/allenai/c4/checkpoints
+  #     max_steps: null
+  #     max_samples: null      
+  #     batch_size: 8
+  #     epochs: 3
+  #     lr: 2.0e-5
+  #     warmup_steps: 0
+  #     max_seq_length: 512
+  #     save_steps: 0
+  #     save_model: false
+  #     force_flush: false
+  #     pin_memory: true
+  #     profile: false
+  #     profile_steps: 10
+  #     force_retokenize: false
+  #     streaming: false
+  #     no_ops: true
+  #     shuffle: false
+-   name: Llama-3.2-1B-10000-streaming-shuffle
+    script: trainers/pretrain.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: json
+      data_dir: /raid/datasets/c4/en-json.gz/*.json.gz
+      output_dir: /raid/datasets/allenai/c4/checkpoints
+      max_steps: 10000
+      max_samples: null      
+      batch_size: 8
+      epochs: 3
+      lr: 2.0e-5
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      force_flush: false
+      pin_memory: true
+      profile: false
+      profile_steps: 10
+      force_retokenize: false
+      streaming: true
+      no_ops: false
+      shuffle: true
+-   name: Llama-3.2-1B-10000-streaming-no_shuffle
+    script: trainers/pretrain.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: json
+      data_dir: /raid/datasets/c4/en-json.gz/*.json.gz
+      output_dir: /raid/datasets/allenai/c4/checkpoints
+      max_steps: 10000
+      max_samples: null      
+      batch_size: 8
+      epochs: 3
+      lr: 2.0e-5
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      force_flush: false
+      pin_memory: true
+      profile: false
+      profile_steps: 10
+      force_retokenize: false
+      streaming: true
+      no_ops: false
+      shuffle: false

@@ -1,0 +1,27 @@
+timestamp: '2026-07-13T13:06:02.686267+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/pretrain_transfer/Qwen3-1.7B-batch-16-transfer-workers-48_20260713_130553/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/pretrain_transfer/Qwen3-1.7B-batch-16-transfer-workers-48_20260713_130553/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/pretrain.py
+real_log_output: /home/jbia/project-angel/p1/experiments/pretrain_transfer/Qwen3-1.7B-batch-16-transfer-workers-48_20260713_130553/logs
+config:
+  batch_size: 16
+  cache_dir: /raid/datasets/c4/converted/arrow
+  data_dir: /raid/datasets/c4/converted/arrow
+  epochs: 1
+  lr: 2.0e-06
+  max_seq_length: 512
+  max_steps: 5000
+  mode: transfer
+  model_name: Qwen/Qwen3-1.7B
+  num_batches: -1
+  num_workers:
+  - 48
+  on_the_fly_tokenization: true
+  output_dir: /raid/datasets/tatsu-lab/alpaca/checkpoints
+  pin_memory: true
+  prefetch_factor: 2
+  save_model: false
+  save_steps: 0
+  streaming: false
+  torch_compile: false
+  warmup_steps: 0

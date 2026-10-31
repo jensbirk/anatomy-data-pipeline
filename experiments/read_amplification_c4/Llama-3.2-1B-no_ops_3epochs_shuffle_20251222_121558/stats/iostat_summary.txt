@@ -1,0 +1,23 @@
+Run: Llama-3.2-1B-no_ops_3epochs_shuffle_20251222
+Source: dio/experiments/llm_finetune_no_ops_c4_epochs/Llama-3.2-1B-no_ops_3epochs_shuffle_20251222_121558/logs/iostat.csv
+Excluded Start: 0s
+
+--- Device: nvme1n1 ---
+  Analyzed Duration: 134920.05 s
+  Read:  158.85 GB
+         Avg: 1.21 | Med: 0.23 | Std: 6.30
+         Min: 0.00 | Max: 1236.46 MB/s
+  Write: 65.45 GB
+         Avg: 0.50 | Med: 0.04 | Std: 10.05
+         Min: 0.00 | Max: 1170.79 MB/s
+  Total: 224.30 GB
+
+--- Device: nvme0n1 ---
+  Analyzed Duration: 134920.05 s
+  Read:  377533.61 GB
+         Avg: 2865.36 | Med: 2873.41 | Std: 277.31
+         Min: 0.00 | Max: 6369.44 MB/s
+  Write: 0.00 GB
+         Avg: 0.00 | Med: 0.00 | Std: 0.00
+         Min: 0.00 | Max: 0.02 MB/s
+  Total: 377533.61 GB

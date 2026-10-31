@@ -1,0 +1,20 @@
+timestamp: '2026-10-21T01:35:49.343731+00:00'
+source_config: /dtu/p1/jebian/anatomy-data-pipeline/experiments/checkpoint_cost_nfs/SegResNet-async-1-r1_20261021_033548/config.yaml
+snapshot_path: /dtu/p1/jebian/anatomy-data-pipeline/experiments/checkpoint_cost_nfs/SegResNet-async-1-r1_20261021_033548/code_snapshot/config.yaml
+script: /dtu/p1/jebian/anatomy-data-pipeline/trainers/medical_segmentation_throughput.py
+real_log_output: /dtu/p1/jebian/anatomy-data-pipeline/experiments/checkpoint_cost_nfs/SegResNet-async-1-r1_20261021_033548/logs
+config:
+  async_checkpoint: true
+  batch_size: 4
+  cache_dir: /dtu/p1/jebian/data/
+  checkpoint_timing: true
+  epochs: 1
+  max_steps: 30
+  mode: train
+  model: SegResNet
+  num_batches: 30
+  num_workers: 8
+  output_dir: /dtu/p1/jebian/checkpoints/brats
+  save_steps: 1
+  task: Task01_BrainTumour
+  timing_warmup_steps: 20

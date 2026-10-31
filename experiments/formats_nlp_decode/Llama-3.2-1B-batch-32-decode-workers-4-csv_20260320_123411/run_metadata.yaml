@@ -1,0 +1,3 @@
+name: Llama-3.2-1B-batch-32-decode-workers-4-csv
+run_id: Llama-3.2-1B-batch-32-decode-workers-4-csv_20260320_123411
+script: trainers/llm_finetune_throughput_filetypes.py

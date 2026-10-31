@@ -1,0 +1,3 @@
+name: ImageNet-batch-1024-train-workers-2-png
+run_id: ImageNet-batch-1024-train-workers-2-png_20260324_154611
+script: trainers/image_classification_throughput.py

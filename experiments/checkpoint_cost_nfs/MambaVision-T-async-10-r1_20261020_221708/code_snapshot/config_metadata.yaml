@@ -1,0 +1,23 @@
+timestamp: '2026-10-20T20:17:08.593230+00:00'
+source_config: /dtu/p1/jebian/anatomy-data-pipeline/experiments/checkpoint_cost_nfs/MambaVision-T-async-10-r1_20261020_221708/config.yaml
+snapshot_path: /dtu/p1/jebian/anatomy-data-pipeline/experiments/checkpoint_cost_nfs/MambaVision-T-async-10-r1_20261020_221708/code_snapshot/config.yaml
+script: /dtu/p1/jebian/anatomy-data-pipeline/trainers/image_classification_throughput.py
+real_log_output: /dtu/p1/jebian/anatomy-data-pipeline/experiments/checkpoint_cost_nfs/MambaVision-T-async-10-r1_20261020_221708/logs
+config:
+  async_checkpoint: true
+  batch_size: 1024
+  checkpoint_timing: true
+  data_dir: /dtu/p1/jebian/data/train/
+  dataset_name: imagenet-1k
+  epochs: 1
+  max_steps: 120
+  mode: train
+  model_name: nvidia/MambaVision-T-1K
+  num_batches: 120
+  num_workers: 8
+  output_dir: /dtu/p1/jebian/checkpoints/imagenet
+  persistent_workers: true
+  pin_memory: true
+  prefetch_factor: 2
+  save_steps: 10
+  timing_warmup_steps: 20

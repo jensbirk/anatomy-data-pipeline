@@ -1,0 +1,642 @@
+runs:
+  # - name: Llama-3.2-1B-batch-32-train-workers-8-arrow-mem-50GB-swap-135GB
+  #   script: trainers/llm_finetune_throughput_filetypes.py
+  #   memory_limit_gb: 50
+  #   config:
+  #     model_name: meta-llama/Llama-3.2-1B
+  #     dataset_name: /raid/datasets/alpaca/arrow/alpaca_data.arrow
+  #     data_dir: null
+  #     max_steps: 100
+  #     max_samples: null      
+  #     batch_size: 32
+  #     prefetch_factor: 2
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "train" 
+  #     epochs: 1
+  #     lr: 2.0e-6
+  #     warmup_steps: 0
+  #     max_seq_length: 512
+  #     save_steps: 0
+  #     save_model: false
+  #     pin_memory: true
+  #     streaming: false
+  #     torch_compile: false
+
+  # - name: Llama-3.2-1B-batch-32-train-workers-8-arrow-mem-40GB-swap-135GB
+  #   script: trainers/llm_finetune_throughput_filetypes.py
+  #   memory_limit_gb: 40
+  #   config:
+  #     model_name: meta-llama/Llama-3.2-1B
+  #     dataset_name: /raid/datasets/alpaca/arrow/alpaca_data.arrow
+  #     data_dir: null
+  #     max_steps: 100
+  #     max_samples: null      
+  #     batch_size: 32
+  #     prefetch_factor: 2
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "train" 
+  #     epochs: 1
+  #     lr: 2.0e-6
+  #     warmup_steps: 0
+  #     max_seq_length: 512
+  #     save_steps: 0
+  #     save_model: false
+  #     pin_memory: true
+  #     streaming: false
+  #     torch_compile: false
+
+  # - name: Llama-3.2-1B-batch-32-train-workers-8-arrow-mem-30GB-swap-135GB
+  #   script: trainers/llm_finetune_throughput_filetypes.py
+  #   memory_limit_gb: 30
+  #   config:
+  #     model_name: meta-llama/Llama-3.2-1B
+  #     dataset_name: /raid/datasets/alpaca/arrow/alpaca_data.arrow
+  #     data_dir: null
+  #     max_steps: 100
+  #     max_samples: null      
+  #     batch_size: 32
+  #     prefetch_factor: 2
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "train" 
+  #     epochs: 1
+  #     lr: 2.0e-6
+  #     warmup_steps: 0
+  #     max_seq_length: 512
+  #     save_steps: 0
+  #     save_model: false
+  #     pin_memory: true
+  #     streaming: false
+  #     torch_compile: false
+
+  # - name: Llama-3.2-1B-batch-32-train-workers-8-arrow-mem-20GB-swap-135GB
+  #   script: trainers/llm_finetune_throughput_filetypes.py
+  #   memory_limit_gb: 20
+  #   config:
+  #     model_name: meta-llama/Llama-3.2-1B
+  #     dataset_name: /raid/datasets/alpaca/arrow/alpaca_data.arrow
+  #     data_dir: null
+  #     max_steps: 100
+  #     max_samples: null      
+  #     batch_size: 32
+  #     prefetch_factor: 2
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "train" 
+  #     epochs: 1
+  #     lr: 2.0e-6
+  #     warmup_steps: 0
+  #     max_seq_length: 512
+  #     save_steps: 0
+  #     save_model: false
+  #     pin_memory: true
+  #     streaming: false
+  #     torch_compile: false
+
+  # - name: Llama-3.2-1B-batch-32-train-workers-8-arrow-mem-10GB-swap-135GB
+  #   script: trainers/llm_finetune_throughput_filetypes.py
+  #   memory_limit_gb: 10
+  #   config:
+  #     model_name: meta-llama/Llama-3.2-1B
+  #     dataset_name: /raid/datasets/alpaca/arrow/alpaca_data.arrow
+  #     data_dir: null
+  #     max_steps: 100
+  #     max_samples: null      
+  #     batch_size: 32
+  #     prefetch_factor: 2
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "train" 
+  #     epochs: 1
+  #     lr: 2.0e-6
+  #     warmup_steps: 0
+  #     max_seq_length: 512
+  #     save_steps: 0
+  #     save_model: false
+  #     pin_memory: true
+  #     streaming: false
+  #     torch_compile: false
+  # - name: Llama-3.2-1B-batch-32-train-workers-8-arrow-mem-5GB-swap-135GB
+  #   script: trainers/llm_finetune_throughput_filetypes.py
+  #   memory_limit_gb: 5
+  #   config:
+  #     model_name: meta-llama/Llama-3.2-1B
+  #     dataset_name: /raid/datasets/alpaca/arrow/alpaca_data.arrow
+  #     data_dir: null
+  #     max_steps: 100
+  #     max_samples: null      
+  #     batch_size: 32
+  #     prefetch_factor: 2
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "train" 
+  #     epochs: 1
+  #     lr: 2.0e-6
+  #     warmup_steps: 0
+  #     max_seq_length: 512
+  #     save_steps: 0
+  #     save_model: false
+  #     pin_memory: true
+  #     streaming: false
+  #     torch_compile: false
+
+  # - name: Llama-3.2-1B-batch-32-train-workers-8-arrow-mem-1GB-swap-135GB
+  #   script: trainers/llm_finetune_throughput_filetypes.py
+  #   memory_limit_gb: 1
+  #   config:
+  #     model_name: meta-llama/Llama-3.2-1B
+  #     dataset_name: /raid/datasets/alpaca/arrow/alpaca_data.arrow
+  #     data_dir: null
+  #     max_steps: 100
+  #     max_samples: null      
+  #     batch_size: 32
+  #     prefetch_factor: 2
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "train" 
+  #     epochs: 1
+  #     lr: 2.0e-6
+  #     warmup_steps: 0
+  #     max_seq_length: 512
+  #     save_steps: 0
+  #     save_model: false
+  #     pin_memory: true
+  #     streaming: false
+  #     torch_compile: false
+
+  # - name: Llama-3.2-1B-batch-32-train-workers-8-csv-swap-135GB
+  #   script: trainers/llm_finetune_throughput_filetypes.py
+  #   memory_limit_gb: 1
+  #   config:
+  #     model_name: meta-llama/Llama-3.2-1B
+  #     dataset_name: /raid/datasets/alpaca/csv/alpaca_data.csv
+  #     data_dir: null
+  #     max_steps: 100
+  #     max_samples: null      
+  #     batch_size: 32
+  #     prefetch_factor: 2
+  #     num_batches: -1  # -1 means all batches
+  #     num_workers: [8]
+  #     mode: "train" 
+  #     epochs: 1
+  #     lr: 2.0e-6
+  #     warmup_steps: 0
+  #     max_seq_length: 512
+  #     save_steps: 0
+  #     save_model: false
+  #     pin_memory: true
+  #     streaming: false
+  #     torch_compile: false
+
+  - name: ImageNet-batch-1024-train-workers-8-jpg-mem-100GB-swap-135GB
+    script: trainers/image_classification_throughput.py
+    memory_limit_gb: 100
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/jpg"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "train" 
+      num_workers: [8]
+      channels_last: true
+
+  - name: ImageNet-batch-1024-train-workers-8-jpg-mem-50GB-swap-135GB
+    script: trainers/image_classification_throughput.py
+    memory_limit_gb: 50
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/jpg"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "train" 
+      num_workers: [8]
+      channels_last: true
+  - name: ImageNet-batch-1024-train-workers-8-jpg-mem-40GB-swap-135GB
+    script: trainers/image_classification_throughput.py
+    memory_limit_gb: 40
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/jpg"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "train" 
+      num_workers: [8]
+      channels_last: true
+  - name: ImageNet-batch-1024-train-workers-8-jpg-mem-20GB-swap-135GB
+    script: trainers/image_classification_throughput.py
+    memory_limit_gb: 20
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/jpg"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "train" 
+      num_workers: [8]
+      channels_last: true
+  - name: ImageNet-batch-1024-train-workers-8-jpg-mem-10GB-swap-135GB
+    script: trainers/image_classification_throughput.py
+    memory_limit_gb: 10
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/jpg"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "train" 
+      num_workers: [8]
+      channels_last: true
+  - name: ImageNet-batch-1024-train-workers-8-jpg-mem-5GB-swap-135GB
+    script: trainers/image_classification_throughput.py
+    memory_limit_gb: 5
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/jpg"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "train" 
+      num_workers: [8]
+      channels_last: true
+
+
+  # - name: Whisper-small-batch-64-train-workers-8-flac-mem-50GB-swap-135GB
+  #   script: trainers/speech_throughput.py
+  #   memory_limit_gb: 50
+  #   config:
+  #     model_name: openai/whisper-small
+  #     dataset_name: librispeech_asr
+  #     dataset_config: clean
+  #     train_split: "train.100"
+  #     eval_split: "test"
+  #     dataset_root: /raid/datasets/librispeech/flac
+  #     dataset_type: "flac"
+  #     sampling_rate: 16000
+  #     audio_column: audio
+  #     text_column: text
+  #     language: english
+  #     cache_dir: /raid/datasets/openslr
+  #     output_dir: /raid/datasets/openslr/checkpoints
+  #     batch_size: 64
+  #     epochs: 1
+  #     max_steps: -1
+  #     lr: 1.0e-5
+  #     seed: 42
+  #     freeze_encoder: false
+  #     save_model: false
+  #     mode: "train"
+  #     num_batches: -1
+  #     prefetch_factor: 2
+  #     num_workers: [8]
+  # - name: Whisper-small-batch-64-train-workers-8-flac-mem-40GB-swap-135GB
+  #   script: trainers/speech_throughput.py
+  #   memory_limit_gb: 40
+  #   config:
+  #     model_name: openai/whisper-small
+  #     dataset_name: librispeech_asr
+  #     dataset_config: clean
+  #     train_split: "train.100"
+  #     eval_split: "test"
+  #     dataset_root: /raid/datasets/librispeech/flac
+  #     dataset_type: "flac"
+  #     sampling_rate: 16000
+  #     audio_column: audio
+  #     text_column: text
+  #     language: english
+  #     cache_dir: /raid/datasets/openslr
+  #     output_dir: /raid/datasets/openslr/checkpoints
+  #     batch_size: 64
+  #     epochs: 1
+  #     max_steps: -1 
+  #     lr: 1.0e-5
+  #     seed: 42
+  #     freeze_encoder: false
+  #     save_model: false
+  #     mode: "train"
+  #     num_batches: -1
+  #     prefetch_factor: 2
+  #     num_workers: [8]
+  # - name: Whisper-small-batch-64-train-workers-8-flac-mem-30GB-swap-135GB
+  #   script: trainers/speech_throughput.py
+  #   memory_limit_gb: 30
+  #   config:
+  #     model_name: openai/whisper-small
+  #     dataset_name: librispeech_asr
+  #     dataset_config: clean
+  #     train_split: "train.100"
+  #     eval_split: "test"
+  #     dataset_root: /raid/datasets/librispeech/flac
+  #     dataset_type: "flac"
+  #     sampling_rate: 16000
+  #     audio_column: audio
+  #     text_column: text
+  #     language: english
+  #     cache_dir: /raid/datasets/openslr
+  #     output_dir: /raid/datasets/openslr/checkpoints
+  #     batch_size: 64
+  #     epochs: 1
+  #     max_steps: -1
+  #     lr: 1.0e-5
+  #     seed: 42
+  #     freeze_encoder: false
+  #     save_model: false
+  #     mode: "train"
+  #     num_batches: -1
+  #     prefetch_factor: 2
+  #     num_workers: [8]
+  # - name: Whisper-small-batch-64-train-workers-8-flac-mem-20GB-swap-135GB
+  #   script: trainers/speech_throughput.py
+  #   memory_limit_gb: 20
+  #   config:
+  #     model_name: openai/whisper-small
+  #     dataset_name: librispeech_asr
+  #     dataset_config: clean
+  #     train_split: "train.100"
+  #     eval_split: "test"
+  #     dataset_root: /raid/datasets/librispeech/flac
+  #     dataset_type: "flac"
+  #     sampling_rate: 16000
+  #     audio_column: audio
+  #     text_column: text
+  #     language: english
+  #     cache_dir: /raid/datasets/openslr
+  #     output_dir: /raid/datasets/openslr/checkpoints
+  #     batch_size: 64
+  #     epochs: 1
+  #     max_steps: -1
+  #     lr: 1.0e-5
+  #     seed: 42
+  #     freeze_encoder: false
+  #     save_model: false
+  #     mode: "train"
+  #     num_batches: -1
+  #     prefetch_factor: 2
+  #     num_workers: [8]
+  # - name: Whisper-small-batch-64-train-workers-8-flac-mem-10GB-swap-135GB
+  #   script: trainers/speech_throughput.py
+  #   memory_limit_gb: 10
+  #   config:
+  #     model_name: openai/whisper-small
+  #     dataset_name: librispeech_asr
+  #     dataset_config: clean
+  #     train_split: "train.100"
+  #     eval_split: "test"
+  #     dataset_root: /raid/datasets/librispeech/flac
+  #     dataset_type: "flac"
+  #     sampling_rate: 16000
+  #     audio_column: audio
+  #     text_column: text
+  #     language: english
+  #     cache_dir: /raid/datasets/openslr
+  #     output_dir: /raid/datasets/openslr/checkpoints
+  #     batch_size: 64
+  #     epochs: 1
+  #     max_steps: -1
+  #     lr: 1.0e-5
+  #     seed: 42
+  #     freeze_encoder: false
+  #     save_model: false
+  #     mode: "train"
+  #     num_batches: -1
+  #     prefetch_factor: 2
+  #     num_workers: [8]
+  # - name: Whisper-small-batch-64-train-workers-8-flac-mem-5GB-swap-135GB
+  #   script: trainers/speech_throughput.py
+  #   memory_limit_gb: 5
+  #   config:
+  #     model_name: openai/whisper-small
+  #     dataset_name: librispeech_asr
+  #     dataset_config: clean
+  #     train_split: "train.100"
+  #     eval_split: "test"
+  #     dataset_root: /raid/datasets/librispeech/flac
+  #     dataset_type: "flac"
+  #     sampling_rate: 16000
+  #     audio_column: audio
+  #     text_column: text
+  #     language: english
+  #     cache_dir: /raid/datasets/openslr
+  #     output_dir: /raid/datasets/openslr/checkpoints
+  #     batch_size: 64
+  #     epochs: 1
+  #     max_steps: -1
+  #     lr: 1.0e-5
+  #     seed: 42
+  #     freeze_encoder: false
+  #     save_model: false
+  #     mode: "train"
+  #     num_batches: -1
+  #     prefetch_factor: 2
+  #     num_workers: [8]
+  # - name: Whisper-small-batch-64-train-workers-8-flac-mem-1GB-swap-135GB
+  #   script: trainers/speech_throughput.py
+  #   memory_limit_gb: 1
+  #   config:
+  #     model_name: openai/whisper-small
+  #     dataset_name: librispeech_asr
+  #     dataset_config: clean
+  #     train_split: "train.100"
+  #     eval_split: "test"
+  #     dataset_root: /raid/datasets/librispeech/flac
+  #     dataset_type: "flac"
+  #     sampling_rate: 16000
+  #     audio_column: audio
+  #     text_column: text
+  #     language: english
+  #     cache_dir: /raid/datasets/openslr
+  #     output_dir: /raid/datasets/openslr/checkpoints
+  #     batch_size: 64
+  #     epochs: 1
+  #     max_steps: -1
+  #     lr: 1.0e-5
+  #     seed: 42
+  #     freeze_encoder: false
+  #     save_model: false
+  #     mode: "train"
+  #     num_batches: -1
+  #     prefetch_factor: 2
+  #     num_workers: [8]
+
+
+
+  #  - name: 3D-UNet-batch-32-disk-workers-8-mem-80GB-swap-135GB
+  #    script: trainers/medical_segmentation_throughput.py
+  #    memory_limit_gb: 80
+  #    config:
+  #      model: "UNet"
+  #      task: "Task01_BrainTumour"
+  #      batch_size: 32
+  #      epochs: 1
+  #      num_batches: -1
+  #      num_workers: [8]
+  #      mode: "train"
+  #      cache_dir: "/raid/datasets/brats"
+  #      output_dir: "/raid/datasets/brats/checkpoints"
+  #  - name: 3D-UNet-batch-32-disk-workers-8-mem-70GB-swap-135GB
+  #    script: trainers/medical_segmentation_throughput.py
+  #    memory_limit_gb: 70
+  #    config:
+  #      model: "UNet"
+  #      task: "Task01_BrainTumour"
+  #      batch_size: 32
+  #      epochs: 1
+  #      num_batches: -1
+  #      num_workers: [8]
+  #      mode: "train"
+  #      cache_dir: "/raid/datasets/brats"
+  #      output_dir: "/raid/datasets/brats/checkpoints"
+  #  - name: 3D-UNet-batch-32-disk-workers-8-mem-60GB-swap-135GB
+  #    script: trainers/medical_segmentation_throughput.py
+  #    memory_limit_gb: 60
+  #    config:
+  #      model: "UNet"
+  #      task: "Task01_BrainTumour"
+  #      batch_size: 32
+  #      epochs: 1
+  #      num_batches: -1
+  #      num_workers: [8]
+  #      mode: "train"
+  #      cache_dir: "/raid/datasets/brats"
+  #      output_dir: "/raid/datasets/brats/checkpoints"
+  #  - name: 3D-UNet-batch-32-disk-workers-8-mem-50GB-swap-135GB
+  #    script: trainers/medical_segmentation_throughput.py
+  #    memory_limit_gb: 50
+  #    config:
+  #      model: "UNet"
+  #      task: "Task01_BrainTumour"
+  #      batch_size: 32
+  #      epochs: 1
+  #      num_batches: -1
+  #      num_workers: [8]
+  #      mode: "train"
+  #      cache_dir: "/raid/datasets/brats"
+  #      output_dir: "/raid/datasets/brats/checkpoints"
+  #  - name: 3D-UNet-batch-32-disk-workers-8-mem-40GB-swap-135GB
+  #    script: trainers/medical_segmentation_throughput.py
+  #    memory_limit_gb: 40
+  #    config:
+  #     model: "UNet"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 32
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "train"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  #  - name: 3D-UNet-batch-32-disk-workers-8-mem-40GB-swap-135GB
+  #    script: trainers/medical_segmentation_throughput.py
+  #    memory_limit_gb: 40
+  #    config:
+  #       model: "UNet"
+  #       task: "Task01_BrainTumour"
+  #       batch_size: 32
+  #       epochs: 1
+  #       num_batches: -1
+  #       num_workers: [8]
+  #       mode: "train"
+  #       cache_dir: "/raid/datasets/brats"
+  #       output_dir: "/raid/datasets/brats/checkpoints"
+  #  - name: 3D-UNet-batch-32-disk-workers-8-mem-30GB-swap-135GB
+  #    script: trainers/medical_segmentation_throughput.py
+  #    memory_limit_gb: 30
+  #    config:
+  #     model: "UNet"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 32
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "train"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  #  - name: 3D-UNet-batch-32-disk-workers-8-mem-20GB-swap-135GB
+  #    script: trainers/medical_segmentation_throughput.py
+  #    memory_limit_gb: 20
+  #    config:
+  #     model: "UNet"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 32
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "train"
+  #     lr: 1.0e-04
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  #  - name: 3D-UNet-batch-32-disk-workers-8-mem-10GB-swap-135GB
+  #    script: trainers/medical_segmentation_throughput.py
+  #    memory_limit_gb: 10
+  #    config:
+  #     model: "UNet"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 32
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "train"
+  #     lr: 1.0e-04
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  #  - name: 3D-UNet-batch-32-disk-workers-8-mem-50GB-swap-135GB
+  #    script: trainers/medical_segmentation_throughput.py
+  #    memory_limit_gb: 50
+  #    config:
+  #     model: "UNet"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 32
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "train"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  #  - name: 3D-UNet-batch-32-disk-workers-8-mem-5GB-swap-135GB
+  #    script: trainers/medical_segmentation_throughput.py
+  #    memory_limit_gb: 5
+  #    config:
+  #     model: "UNet"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 32
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "train"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  #  - name: 3D-UNet-batch-32-disk-workers-8-mem-1GB-swap-135GB
+  #    script: trainers/medical_segmentation_throughput.py
+  #    memory_limit_gb: 1
+  #    config:
+  #     model: "UNet"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 32
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "train"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"

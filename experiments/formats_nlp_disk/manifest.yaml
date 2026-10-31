@@ -1,0 +1,707 @@
+runs:
+  - name: Llama-3.2-1B-batch-32-disk-workers-0-parquet
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/parquet/alpaca_data.parquet
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [0]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-2-parquet
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/parquet/alpaca_data.parquet
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [2]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-4-parquet
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/parquet/alpaca_data.parquet
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [4]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-8-parquet
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/parquet/alpaca_data.parquet
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [8]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-16-parquet
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/parquet/alpaca_data.parquet
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [16]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-24-parquet
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/parquet/alpaca_data.parquet
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [24]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-32-parquet
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/parquet/alpaca_data.parquet
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [32]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-48-parquet
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/parquet/alpaca_data.parquet
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [48]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-0-arrow
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/arrow/alpaca_data.arrow
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [0]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-2-arrow
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/arrow/alpaca_data.arrow
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [2]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-4-arrow
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/arrow/alpaca_data.arrow
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [4]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-8-arrow
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/arrow/alpaca_data.arrow
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [8]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-16-arrow
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/arrow/alpaca_data.arrow
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [16]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-24-arrow
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/arrow/alpaca_data.arrow
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [24]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-32-arrow
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/arrow/alpaca_data.arrow
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [32]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-48-arrow
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/arrow/alpaca_data.arrow
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [48]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+
+### JSONL
+  - name: Llama-3.2-1B-batch-32-disk-workers-0-jsonl
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/jsonl/alpaca_data.jsonl
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [0]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-2-jsonl
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/jsonl/alpaca_data.jsonl
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [2]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-4-jsonl
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/jsonl/alpaca_data.jsonl
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [4]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-8-jsonl
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/jsonl/alpaca_data.jsonl
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [8]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-16-jsonl
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/jsonl/alpaca_data.jsonl
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [16]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-24-jsonl
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/jsonl/alpaca_data.jsonl
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [24]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-32-jsonl
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/jsonl/alpaca_data.jsonl
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [32]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-48-jsonl
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/jsonl/alpaca_data.jsonl
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [48]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-0-csv
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/csv/alpaca_data.csv
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [0]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-2-csv
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/csv/alpaca_data.csv
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [2]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-4-csv
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/csv/alpaca_data.csv
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [4]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-8-csv
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/csv/alpaca_data.csv
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [8]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-16-csv
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/csv/alpaca_data.csv
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [16]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-24-csv
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/csv/alpaca_data.csv
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [24]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-32-csv
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/csv/alpaca_data.csv
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [32]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+  - name: Llama-3.2-1B-batch-32-disk-workers-48-csv
+    script: trainers/llm_finetune_throughput_filetypes.py
+    config:
+      model_name: meta-llama/Llama-3.2-1B
+      dataset_name: /raid/datasets/alpaca/csv/alpaca_data.csv
+      data_dir: null
+      max_steps: 10
+      max_samples: null      
+      batch_size: 32
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [48]
+      mode: "disk" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false

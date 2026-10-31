@@ -1,0 +1,3 @@
+name: Llama-3.2-3B-batch-16
+run_id: Llama-3.2-3B-batch-16_20260210_125933
+script: trainers/llm_finetune_latency.py

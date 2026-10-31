@@ -1,0 +1,5 @@
+git_commit: 62d303b5faa737bba2f28cc4f83f7e77018ab55d
+git_dirty: false
+name: MambaVision-T-sync-10-r1
+run_id: MambaVision-T-sync-10-r1_20261020_221135
+script: trainers/image_classification_throughput.py

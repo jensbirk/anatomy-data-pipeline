@@ -1,0 +1,3 @@
+name: ViT-base-async-10-r3
+run_id: ViT-base-async-10-r3_20261019_134821
+script: trainers/image_classification_throughput.py

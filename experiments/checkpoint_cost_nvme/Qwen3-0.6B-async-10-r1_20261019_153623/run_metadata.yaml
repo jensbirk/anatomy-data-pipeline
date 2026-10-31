@@ -1,0 +1,3 @@
+name: Qwen3-0.6B-async-10-r1
+run_id: Qwen3-0.6B-async-10-r1_20261019_153623
+script: trainers/llm_finetune_throughput.py

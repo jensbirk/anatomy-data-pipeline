@@ -1,0 +1,3 @@
+name: ResNet-batch-1024-disk-workers-32
+run_id: ResNet-batch-1024-disk-workers-32_20260710_081831
+script: trainers/image_classification_throughput.py

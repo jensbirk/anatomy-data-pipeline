@@ -1,0 +1,20 @@
+timestamp: '2026-10-19T16:47:41.307236+00:00'
+source_config: /home/jbia/anatomy-data-pipeline-artifact/experiments/checkpoint_cost_nvme/SegResNet-sync-10-r2_20261019_164740/config.yaml
+snapshot_path: /home/jbia/anatomy-data-pipeline-artifact/experiments/checkpoint_cost_nvme/SegResNet-sync-10-r2_20261019_164740/code_snapshot/config.yaml
+script: /home/jbia/anatomy-data-pipeline-artifact/trainers/medical_segmentation_throughput.py
+real_log_output: /home/jbia/anatomy-data-pipeline-artifact/experiments/checkpoint_cost_nvme/SegResNet-sync-10-r2_20261019_164740/logs
+config:
+  async_checkpoint: false
+  batch_size: 4
+  cache_dir: /raid/datasets/brats
+  checkpoint_timing: true
+  epochs: 2
+  max_steps: 60
+  mode: train
+  model: SegResNet
+  num_batches: 60
+  num_workers: 8
+  output_dir: /raid/checkpoints/brats
+  save_steps: 10
+  task: Task01_BrainTumour
+  timing_warmup_steps: 20

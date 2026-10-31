@@ -1,0 +1,5 @@
+git_commit: 6c6519e88e5223c643ccaa24bd641c50fd7357f5
+git_dirty: false
+name: Llama-3.2-3B-sync-1-waf
+run_id: Llama-3.2-3B-sync-1-waf_20261020_190248
+script: trainers/llm_finetune_throughput.py

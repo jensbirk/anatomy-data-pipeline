@@ -1,0 +1,18 @@
+timestamp: '2026-03-23T17:46:48.293702+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/formats_img_classfication_decode/ImageNet-batch-1024-decode-workers-16-png_20260323_174622/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/formats_img_classfication_decode/ImageNet-batch-1024-decode-workers-16-png_20260323_174622/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/image_classification_throughput.py
+real_log_output: /home/jbia/project-angel/p1/experiments/formats_img_classfication_decode/ImageNet-batch-1024-decode-workers-16-png_20260323_174622/logs
+config:
+  batch_size: 1024
+  data_dir: /raid/datasets/imagenet-1k/png
+  epochs: 1
+  mode: decode
+  model_name: microsoft/resnet-50
+  num_batches: -1
+  num_workers:
+  - 16
+  output_dir: /raid/datasets/ILSVRC/imagenet-1k/checkpoints
+  persistent_workers: true
+  pin_memory: true
+  prefetch_factor: 2

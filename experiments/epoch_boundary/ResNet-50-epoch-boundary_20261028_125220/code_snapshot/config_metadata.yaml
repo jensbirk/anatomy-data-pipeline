@@ -1,0 +1,16 @@
+timestamp: '2026-10-28T12:52:21.036474+00:00'
+source_config: /home/jbia/anatomy-data-pipeline-artifact/experiments/epoch_boundary_persistent/ResNet-50-epoch-boundary_20261028_125220/config.yaml
+snapshot_path: /home/jbia/anatomy-data-pipeline-artifact/experiments/epoch_boundary_persistent/ResNet-50-epoch-boundary_20261028_125220/code_snapshot/config.yaml
+script: /home/jbia/anatomy-data-pipeline-artifact/trainers/image_classification_epoch_boundary.py
+real_log_output: /home/jbia/anatomy-data-pipeline-artifact/experiments/epoch_boundary_persistent/ResNet-50-epoch-boundary_20261028_125220/logs
+config:
+  batch_size: 1024
+  cache_dir: /raid/datasets/ILSVRC/imagenet-1k
+  dataset_name: ILSVRC/imagenet-1k
+  epochs: 3
+  learning_rate: 0.0002
+  model_name: microsoft/resnet-50
+  num_batches: -1
+  num_workers: 8
+  output_dir: /raid/datasets/ILSVRC/imagenet-1k/epoch_boundary_persistent
+  persistent_workers: true

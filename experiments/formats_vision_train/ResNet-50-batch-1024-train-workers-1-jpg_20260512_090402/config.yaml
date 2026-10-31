@@ -1,0 +1,12 @@
+batch_size: 1024
+data_dir: /raid/datasets/imagenet-1k/jpg
+epochs: 1
+mode: train
+model_name: microsoft/resnet-50
+num_batches: -1
+num_workers:
+- 1
+output_dir: /raid/datasets/ILSVRC/imagenet-1k/checkpoints
+persistent_workers: true
+pin_memory: true
+prefetch_factor: 2

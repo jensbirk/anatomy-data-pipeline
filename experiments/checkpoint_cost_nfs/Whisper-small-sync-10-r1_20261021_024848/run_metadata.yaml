@@ -1,0 +1,5 @@
+git_commit: 62d303b5faa737bba2f28cc4f83f7e77018ab55d
+git_dirty: false
+name: Whisper-small-sync-10-r1
+run_id: Whisper-small-sync-10-r1_20261021_024848
+script: trainers/speech_throughput.py

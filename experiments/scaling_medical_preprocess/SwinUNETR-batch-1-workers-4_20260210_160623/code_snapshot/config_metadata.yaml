@@ -1,0 +1,16 @@
+timestamp: '2026-02-10T16:06:24.229974+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/medical_segmentation_throughput_preprocess/SwinUNETR-batch-1-workers-4_20260210_160623/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/medical_segmentation_throughput_preprocess/SwinUNETR-batch-1-workers-4_20260210_160623/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/medical_segmentation_throughput.py
+real_log_output: /home/jbia/project-angel/p1/experiments/medical_segmentation_throughput_preprocess/SwinUNETR-batch-1-workers-4_20260210_160623/logs
+config:
+  batch_size: 1
+  cache_dir: /raid/datasets/brats
+  epochs: 1
+  mode: preprocess
+  model: SwinUNETR
+  num_batches: -1
+  num_workers:
+  - 4
+  output_dir: /raid/datasets/brats/checkpoints
+  task: Task01_BrainTumour

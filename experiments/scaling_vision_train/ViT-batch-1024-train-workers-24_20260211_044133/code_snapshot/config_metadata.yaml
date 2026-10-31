@@ -1,0 +1,19 @@
+timestamp: '2026-02-11T04:41:42.389162+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/image_classification_throughput_train/ViT-batch-1024-train-workers-24_20260211_044133/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/image_classification_throughput_train/ViT-batch-1024-train-workers-24_20260211_044133/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/image_classification_throughput.py
+real_log_output: /home/jbia/project-angel/p1/experiments/image_classification_throughput_train/ViT-batch-1024-train-workers-24_20260211_044133/logs
+config:
+  batch_size: 1024
+  data_dir: /raid/tensio/imagenet/full/imagefolder
+  epochs: 1
+  learning_rate: 0.0002
+  mode: train
+  model_name: google/vit-base-patch16-224
+  num_batches: -1
+  num_workers:
+  - 24
+  output_dir: /raid/datasets/ILSVRC/imagenet-1k/checkpoints
+  persistent_workers: true
+  pin_memory: true
+  prefetch_factor: 2

@@ -1,0 +1,20 @@
+timestamp: '2026-10-21T03:04:13.929269+00:00'
+source_config: /dtu/p1/jebian/anatomy-data-pipeline/experiments/checkpoint_cost_nfs/UNet-sync-10-r2_20261021_050413/config.yaml
+snapshot_path: /dtu/p1/jebian/anatomy-data-pipeline/experiments/checkpoint_cost_nfs/UNet-sync-10-r2_20261021_050413/code_snapshot/config.yaml
+script: /dtu/p1/jebian/anatomy-data-pipeline/trainers/medical_segmentation_throughput.py
+real_log_output: /dtu/p1/jebian/anatomy-data-pipeline/experiments/checkpoint_cost_nfs/UNet-sync-10-r2_20261021_050413/logs
+config:
+  async_checkpoint: false
+  batch_size: 32
+  cache_dir: /dtu/p1/jebian/data/
+  checkpoint_timing: true
+  epochs: 10
+  max_steps: 12
+  mode: train
+  model: UNet
+  num_batches: 12
+  num_workers: 8
+  output_dir: /dtu/p1/jebian/checkpoints/brats
+  save_steps: 10
+  task: Task01_BrainTumour
+  timing_warmup_steps: 20

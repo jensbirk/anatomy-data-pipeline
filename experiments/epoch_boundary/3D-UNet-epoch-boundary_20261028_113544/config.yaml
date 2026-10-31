@@ -1,0 +1,9 @@
+batch_size: 32
+cache_dir: /raid/datasets/brats
+epochs: 3
+model: UNet
+num_batches: -1
+num_workers: 8
+output_dir: /raid/datasets/brats/epoch_boundary_persistent
+persistent_workers: true
+task: Task01_BrainTumour

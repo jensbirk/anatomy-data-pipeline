@@ -1,0 +1,13 @@
+batch_size: 1024
+data_dir: /raid/tensio/imagenet/full/imagefolder
+epochs: 1
+learning_rate: 0.0002
+mode: train
+model_name: google/vit-base-patch16-224
+num_batches: -1
+num_workers:
+- 0
+output_dir: /raid/datasets/ILSVRC/imagenet-1k/checkpoints
+persistent_workers: true
+pin_memory: true
+prefetch_factor: 2

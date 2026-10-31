@@ -1,0 +1,5 @@
+git_commit: d1a45ab2aa6075138c7d6da2415b58bb6f925eac
+git_dirty: false
+name: ResNet-50-epoch-boundary
+run_id: ResNet-50-epoch-boundary_20261028_125220
+script: trainers/image_classification_epoch_boundary.py

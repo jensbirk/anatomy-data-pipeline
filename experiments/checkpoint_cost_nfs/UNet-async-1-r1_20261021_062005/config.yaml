@@ -1,0 +1,14 @@
+async_checkpoint: true
+batch_size: 32
+cache_dir: /dtu/p1/jebian/data/
+checkpoint_timing: true
+epochs: 3
+max_steps: 10
+mode: train
+model: UNet
+num_batches: 10
+num_workers: 8
+output_dir: /dtu/p1/jebian/checkpoints/brats
+save_steps: 1
+task: Task01_BrainTumour
+timing_warmup_steps: 20

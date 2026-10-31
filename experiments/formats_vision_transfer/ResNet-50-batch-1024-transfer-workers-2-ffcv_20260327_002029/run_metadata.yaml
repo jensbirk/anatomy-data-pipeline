@@ -1,0 +1,3 @@
+name: ImageNet-batch-1024-transfer-workers-2-ffcv
+run_id: ImageNet-batch-1024-transfer-workers-2-ffcv_20260327_002029
+script: trainers/image_classification_throughput.py

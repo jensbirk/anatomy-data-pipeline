@@ -1,0 +1,67 @@
+runs: 
+  - name: ImageNet-batch-1024-train-workers-16-wds-channels-last
+    script: trainers/image_classification_throughput.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/wds"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "train" 
+      num_workers: [16]
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"
+      dataset_type: "webdataset"
+      channels_last: true
+  - name: ResNet-50-batch-1024-train-workers-16-jpg-baseline-channels
+    script: trainers/image_classification_throughput.py
+    config:
+      batch_size: 1024
+      data_dir: /raid/datasets/imagenet-1k/jpg
+      dataset_type: imagefolder
+      epochs: 1
+      mode: train
+      model_name: microsoft/resnet-50
+      num_batches: -1
+      num_workers:
+        - 16
+      persistent_workers: true
+      pin_memory: true
+      prefetch_factor: 2
+      channels_last: true
+      dataset_type: "jpg"
+  - name: ResNet-50-batch-1024-train-workers-16-png-baseline-channels
+    script: trainers/image_classification_throughput.py
+    config:
+      batch_size: 1024
+      data_dir: /raid/datasets/imagenet-1k/png
+      dataset_type: imagefolder
+      epochs: 1
+      mode: train
+      model_name: microsoft/resnet-50
+      num_batches: -1
+      num_workers:
+        - 16
+      persistent_workers: true
+      pin_memory: true
+      prefetch_factor: 2
+      channels_last: true
+      dataset_type: "png"
+  - name: ImageNet-DALI-batch-1024-train-workers-16-jpg
+    script: trainers/image_classification_throughput_DALI.py
+    config:
+      model_name: "microsoft/resnet-50"
+      data_dir: "/raid/datasets/imagenet-1k/jpg"
+      epochs: 1
+      batch_size: 1024
+      prefetch_factor: 2
+      persistent_workers: true
+      pin_memory: true
+      num_batches: -1  
+      mode: "train" 
+      num_workers: [16]
+      dataset_type: "dali"
+      channels_last: true
+      output_dir: "/raid/datasets/ILSVRC/imagenet-1k/checkpoints"

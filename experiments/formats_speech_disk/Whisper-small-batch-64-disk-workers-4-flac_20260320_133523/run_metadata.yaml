@@ -1,0 +1,3 @@
+name: Whisper-small-batch-64-disk-workers-4-flac
+run_id: Whisper-small-batch-64-disk-workers-4-flac_20260320_133523
+script: trainers/speech_throughput.py

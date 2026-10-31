@@ -1,0 +1,388 @@
+runs:
+  # - name: Llama-3.2-3B-DDP-1gpu
+  #   script: trainers/llm_ddp_pretrain.py
+  #   config:
+  #     model_name: meta-llama/Llama-3.2-3B
+  #     dataset_name: allenai/c4
+  #     data_dir: en
+  #     output_dir: /dcai/users/andjen/checkpoints_ddp
+  #     max_steps: 5000
+  #     max_samples: 400000
+  #     batch_size: 16
+  #     num_batches: -1
+  #     num_workers: [0]
+  #     mode: "train"
+  #     epochs: 1
+  #     lr: 2.0e-6
+  #     warmup_steps: 0
+  #     max_seq_length: 512
+  #     save_steps: 0
+  #     save_model: false
+  #     pin_memory: true
+  #     streaming: false
+  #     torch_compile: false
+  #     num_gpus: 1
+
+  # - name: Llama-3.2-3B-DDP-2gpu
+  #   script: trainers/llm_ddp_pretrain.py
+  #   config:
+  #     model_name: meta-llama/Llama-3.2-3B
+  #     dataset_name: allenai/c4
+  #     data_dir: en
+  #     output_dir: /dcai/users/andjen/checkpoints_ddp
+  #     max_steps: 5000
+  #     max_samples: 400000
+  #     batch_size: 16
+  #     num_batches: -1
+  #     num_workers: [0]
+  #     mode: "train"
+  #     epochs: 1
+  #     lr: 2.0e-6
+  #     warmup_steps: 0
+  #     max_seq_length: 512
+  #     save_steps: 0
+  #     save_model: false
+  #     pin_memory: true
+  #     streaming: false
+  #     torch_compile: false
+  #     num_gpus: 2
+
+  # - name: Llama-3.2-3B-DDP-4gpu
+  #   script: trainers/llm_ddp_pretrain.py
+  #   config:
+  #     model_name: meta-llama/Llama-3.2-3B
+  #     dataset_name: allenai/c4
+  #     data_dir: en
+  #     output_dir: /dcai/users/andjen/checkpoints_ddp
+  #     max_steps: 5000
+  #     max_samples: 400000
+  #     batch_size: 16
+  #     num_batches: -1
+  #     num_workers: [0]
+  #     mode: "train"
+  #     epochs: 1
+  #     lr: 2.0e-6
+  #     warmup_steps: 0
+  #     max_seq_length: 512
+  #     save_steps: 0
+  #     save_model: false
+  #     pin_memory: true
+  #     streaming: false
+  #     torch_compile: false
+  #     num_gpus: 4
+
+  # - name: Llama-3.2-3B-DDP-8gpu
+  #   script: trainers/llm_ddp_pretrain.py
+  #   config:
+  #     model_name: meta-llama/Llama-3.2-3B
+  #     dataset_name: allenai/c4
+  #     data_dir: en
+  #     output_dir: /dcai/users/andjen/checkpoints_ddp
+  #     max_steps: 5000
+  #     max_samples: 400000
+  #     batch_size: 16
+  #     num_batches: -1
+  #     num_workers: [0]
+  #     mode: "train"
+  #     epochs: 1
+  #     lr: 2.0e-6
+  #     warmup_steps: 0
+  #     max_seq_length: 512
+  #     save_steps: 0
+  #     save_model: false
+  #     pin_memory: true
+  #     streaming: false
+  #     torch_compile: false
+  #     num_gpus: 8
+
+
+# 2 workers 
+  - name: Llama-3.2-3B-DDP-1gpu-2-workers
+    script: trainers/llm_ddp_pretrain.py
+    config:
+      model_name: meta-llama/Llama-3.2-3B
+      dataset_name: allenai/c4
+      data_dir: en
+      output_dir: /dcai/users/andjen/checkpoints_ddp
+      max_steps: 5000
+      max_samples: 400000
+      batch_size: 16
+      num_batches: -1
+      num_workers: [2]
+      mode: "train"
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      num_gpus: 1
+
+  - name: Llama-3.2-3B-DDP-2gpu-2-workers
+    script: trainers/llm_ddp_pretrain.py
+    config:
+      model_name: meta-llama/Llama-3.2-3B
+      dataset_name: allenai/c4
+      data_dir: en
+      output_dir: /dcai/users/andjen/checkpoints_ddp
+      max_steps: 5000
+      max_samples: 400000
+      batch_size: 16
+      num_batches: -1
+      num_workers: [2]
+      mode: "train"
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      num_gpus: 2
+
+  - name: Llama-3.2-3B-DDP-4gpu-2-workers
+    script: trainers/llm_ddp_pretrain.py
+    config:
+      model_name: meta-llama/Llama-3.2-3B
+      dataset_name: allenai/c4
+      data_dir: en
+      output_dir: /dcai/users/andjen/checkpoints_ddp
+      max_steps: 5000
+      max_samples: 400000
+      batch_size: 16
+      num_batches: -1
+      num_workers: [2]
+      mode: "train"
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      num_gpus: 4
+
+  - name: Llama-3.2-3B-DDP-8gpu-2-workers
+    script: trainers/llm_ddp_pretrain.py
+    config:
+      model_name: meta-llama/Llama-3.2-3B
+      dataset_name: allenai/c4
+      data_dir: en
+      output_dir: /dcai/users/andjen/checkpoints_ddp
+      max_steps: 5000
+      max_samples: 400000
+      batch_size: 16
+      num_batches: -1
+      num_workers: [2]
+      mode: "train"
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      num_gpus: 8
+
+# 4 workers 
+  - name: Llama-3.2-3B-DDP-1gpu-4-workers
+    script: trainers/llm_ddp_pretrain.py
+    config:
+      model_name: meta-llama/Llama-3.2-3B
+      dataset_name: allenai/c4
+      data_dir: en
+      output_dir: /dcai/users/andjen/checkpoints_ddp
+      max_steps: 5000
+      max_samples: 400000
+      batch_size: 16
+      num_batches: -1
+      num_workers: [4]
+      mode: "train"
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      num_gpus: 1
+
+  - name: Llama-3.2-3B-DDP-2gpu-4-workers
+    script: trainers/llm_ddp_pretrain.py
+    config:
+      model_name: meta-llama/Llama-3.2-3B
+      dataset_name: allenai/c4
+      data_dir: en
+      output_dir: /dcai/users/andjen/checkpoints_ddp
+      max_steps: 5000
+      max_samples: 400000
+      batch_size: 16
+      num_batches: -1
+      num_workers: [4]
+      mode: "train"
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      num_gpus: 2
+
+  - name: Llama-3.2-3B-DDP-4gpu-4-workers
+    script: trainers/llm_ddp_pretrain.py
+    config:
+      model_name: meta-llama/Llama-3.2-3B
+      dataset_name: allenai/c4
+      data_dir: en
+      output_dir: /dcai/users/andjen/checkpoints_ddp
+      max_steps: 5000
+      max_samples: 400000
+      batch_size: 16
+      num_batches: -1
+      num_workers: [4]
+      mode: "train"
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      num_gpus: 4
+
+  - name: Llama-3.2-3B-DDP-8gpu-4-workers
+    script: trainers/llm_ddp_pretrain.py
+    config:
+      model_name: meta-llama/Llama-3.2-3B
+      dataset_name: allenai/c4
+      data_dir: en
+      output_dir: /dcai/users/andjen/checkpoints_ddp
+      max_steps: 5000
+      max_samples: 400000
+      batch_size: 16
+      num_batches: -1
+      num_workers: [4]
+      mode: "train"
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      num_gpus: 8
+  
+# 8 workers 
+  - name: Llama-3.2-3B-DDP-1gpu-8-workers
+    script: trainers/llm_ddp_pretrain.py
+    config:
+      model_name: meta-llama/Llama-3.2-3B
+      dataset_name: allenai/c4
+      data_dir: en
+      output_dir: /dcai/users/andjen/checkpoints_ddp
+      max_steps: 5000
+      max_samples: 400000
+      batch_size: 16
+      num_batches: -1
+      num_workers: [8]
+      mode: "train"
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      num_gpus: 1
+
+  - name: Llama-3.2-3B-DDP-2gpu-8-workers
+    script: trainers/llm_ddp_pretrain.py
+    config:
+      model_name: meta-llama/Llama-3.2-3B
+      dataset_name: allenai/c4
+      data_dir: en
+      output_dir: /dcai/users/andjen/checkpoints_ddp
+      max_steps: 5000
+      max_samples: 400000
+      batch_size: 16
+      num_batches: -1
+      num_workers: [8]
+      mode: "train"
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      num_gpus: 2
+
+  - name: Llama-3.2-3B-DDP-4gpu-8-workers
+    script: trainers/llm_ddp_pretrain.py
+    config:
+      model_name: meta-llama/Llama-3.2-3B
+      dataset_name: allenai/c4
+      data_dir: en
+      output_dir: /dcai/users/andjen/checkpoints_ddp
+      max_steps: 5000
+      max_samples: 400000
+      batch_size: 16
+      num_batches: -1
+      num_workers: [8]
+      mode: "train"
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      num_gpus: 4
+
+  - name: Llama-3.2-3B-DDP-8gpu-8-workers
+    script: trainers/llm_ddp_pretrain.py
+    config:
+      model_name: meta-llama/Llama-3.2-3B
+      dataset_name: allenai/c4
+      data_dir: en
+      output_dir: /dcai/users/andjen/checkpoints_ddp
+      max_steps: 5000
+      max_samples: 400000
+      batch_size: 16
+      num_batches: -1
+      num_workers: [8]
+      mode: "train"
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      num_gpus: 8

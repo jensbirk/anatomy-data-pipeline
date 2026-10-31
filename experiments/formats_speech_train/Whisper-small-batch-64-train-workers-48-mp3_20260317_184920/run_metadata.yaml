@@ -1,0 +1,3 @@
+name: Whisper-small-batch-64-train-workers-48-mp3
+run_id: Whisper-small-batch-64-train-workers-48-mp3_20260317_184920
+script: trainers/speech_throughput.py

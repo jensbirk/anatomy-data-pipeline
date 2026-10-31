@@ -1,0 +1,19 @@
+timestamp: '2026-07-28T17:43:20.555788+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/memory_budget/ImageNet-batch-1024-train-workers-16-jpg-mem-20GB-swap-135GB_20260728_174316/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/memory_budget/ImageNet-batch-1024-train-workers-16-jpg-mem-20GB-swap-135GB_20260728_174316/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/image_classification_throughput.py
+real_log_output: /home/jbia/project-angel/p1/experiments/memory_budget/ImageNet-batch-1024-train-workers-16-jpg-mem-20GB-swap-135GB_20260728_174316/logs
+config:
+  batch_size: 1024
+  channels_last: true
+  data_dir: /raid/datasets/imagenet-1k/jpg
+  dataset_type: jpg
+  epochs: 1
+  mode: train
+  model_name: microsoft/resnet-50
+  num_batches: -1
+  num_workers:
+  - 16
+  persistent_workers: true
+  pin_memory: true
+  prefetch_factor: 2

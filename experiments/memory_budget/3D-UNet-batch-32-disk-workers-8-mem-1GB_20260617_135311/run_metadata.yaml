@@ -1,0 +1,4 @@
+memory_limit_gb: 1
+name: 3D-UNet-batch-32-disk-workers-8-mem-1GB
+run_id: 3D-UNet-batch-32-disk-workers-8-mem-1GB_20260617_135311
+script: trainers/medical_segmentation_throughput.py

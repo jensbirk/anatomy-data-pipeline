@@ -1,0 +1,3 @@
+name: ImageNet-batch-1024-train-workers-16-wds-channels-last
+run_id: ImageNet-batch-1024-train-workers-16-wds-channels-last_20260727_093109
+script: trainers/image_classification_throughput.py

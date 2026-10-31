@@ -1,0 +1,3 @@
+name: 3D-UNet-batch-32-train-workers-4
+run_id: 3D-UNet-batch-32-train-workers-4_20260210_171958
+script: trainers/medical_segmentation_throughput.py

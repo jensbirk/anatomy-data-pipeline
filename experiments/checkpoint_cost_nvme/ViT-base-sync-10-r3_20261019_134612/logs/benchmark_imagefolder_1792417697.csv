@@ -1,0 +1,2 @@
+num_workers,mode,throughput_img_s,throughput_mb_s
+8,train,1263.1765,138.6030

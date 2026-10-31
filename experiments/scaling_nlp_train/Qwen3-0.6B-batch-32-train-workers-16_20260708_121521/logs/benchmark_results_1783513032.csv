@@ -1,0 +1,2 @@
+num_workers,mode,throughput_samp_s,elapsed_s
+16,train,49.5044,64.64

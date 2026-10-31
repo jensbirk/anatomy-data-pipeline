@@ -1,0 +1,26 @@
+timestamp: '2026-06-10T12:07:59.788310+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/memory_budget_llama/Llama-3.2-1B-batch-32-train-workers-8-csv_20260610_120759/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/memory_budget_llama/Llama-3.2-1B-batch-32-train-workers-8-csv_20260610_120759/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/llm_finetune_throughput_filetypes.py
+real_log_output: /home/jbia/project-angel/p1/experiments/memory_budget_llama/Llama-3.2-1B-batch-32-train-workers-8-csv_20260610_120759/logs
+config:
+  batch_size: 32
+  data_dir: null
+  dataset_name: /raid/datasets/alpaca/csv/alpaca_data.csv
+  epochs: 1
+  lr: 2.0e-06
+  max_samples: null
+  max_seq_length: 512
+  max_steps: 100
+  mode: train
+  model_name: meta-llama/Llama-3.2-1B
+  num_batches: -1
+  num_workers:
+  - 8
+  pin_memory: true
+  prefetch_factor: 2
+  save_model: false
+  save_steps: 0
+  streaming: false
+  torch_compile: false
+  warmup_steps: 0

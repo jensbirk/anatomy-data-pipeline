@@ -1,0 +1,15 @@
+timestamp: '2026-10-28T11:35:45.386385+00:00'
+source_config: /home/jbia/anatomy-data-pipeline-artifact/experiments/epoch_boundary_persistent/3D-UNet-epoch-boundary_20261028_113544/config.yaml
+snapshot_path: /home/jbia/anatomy-data-pipeline-artifact/experiments/epoch_boundary_persistent/3D-UNet-epoch-boundary_20261028_113544/code_snapshot/config.yaml
+script: /home/jbia/anatomy-data-pipeline-artifact/trainers/medical_segmentation_epoch_boundary.py
+real_log_output: /home/jbia/anatomy-data-pipeline-artifact/experiments/epoch_boundary_persistent/3D-UNet-epoch-boundary_20261028_113544/logs
+config:
+  batch_size: 32
+  cache_dir: /raid/datasets/brats
+  epochs: 3
+  model: UNet
+  num_batches: -1
+  num_workers: 8
+  output_dir: /raid/datasets/brats/epoch_boundary_persistent
+  persistent_workers: true
+  task: Task01_BrainTumour

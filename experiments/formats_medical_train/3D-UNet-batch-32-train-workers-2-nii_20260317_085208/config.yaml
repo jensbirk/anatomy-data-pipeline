@@ -1,0 +1,10 @@
+batch_size: 32
+cache_dir: /raid/datasets/brats/nii
+epochs: 1
+mode: train
+model: UNet
+num_batches: -1
+num_workers:
+- 2
+output_dir: /raid/datasets/brats/nii/checkpoints
+task: Task01_BrainTumour

@@ -1,0 +1,3 @@
+name: UNet-async-1-r1
+run_id: UNet-async-1-r1_20261019_200109
+script: trainers/medical_segmentation_throughput.py

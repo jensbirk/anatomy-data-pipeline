@@ -1,0 +1,3 @@
+name: Qwen3-1.7B-batch-32-disk-workers-32
+run_id: Qwen3-1.7B-batch-32-disk-workers-32_20260713_120804
+script: trainers/pretrain.py

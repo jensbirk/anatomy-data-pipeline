@@ -1,0 +1,59 @@
+# Epoch-boundary traces (Fig. 11): 3 epochs per model, persistent DataLoader workers.
+runs:
+- name: 3D-UNet-epoch-boundary
+  script: trainers/medical_segmentation_epoch_boundary.py
+  config:
+    model: UNet
+    task: Task01_BrainTumour
+    epochs: 3
+    batch_size: 32
+    num_workers: 8
+    num_batches: -1
+    cache_dir: /raid/datasets/brats
+    output_dir: /raid/datasets/brats/epoch_boundary
+    persistent_workers: true
+- name: Whisper-small-epoch-boundary
+  script: trainers/speech_epoch_boundary.py
+  config:
+    model_name: openai/whisper-small
+    dataset_root: /raid/datasets/librispeech/flac
+    dataset_type: flac
+    language: english
+    sampling_rate: 16000
+    batch_size: 64
+    epochs: 3
+    lr: 1.0e-05
+    num_workers: 8
+    num_batches: -1
+    freeze_encoder: false
+    output_dir: /raid/datasets/librispeech/flac/epoch_boundary
+    persistent_workers: true
+- name: Llama-3.2-1B-epoch-boundary
+  script: trainers/llm_finetune_epoch_boundary.py
+  config:
+    model_name: meta-llama/Llama-3.2-1B
+    dataset_name: tatsu-lab/alpaca
+    epochs: 3
+    batch_size: 8
+    num_workers: 8
+    num_batches: -1
+    lr: 2.0e-06
+    max_seq_length: 512
+    max_samples: null
+    pin_memory: true
+    cache_dir: /raid/datasets/tatsu-lab/alpaca/
+    output_dir: /raid/datasets/tatsu-lab/alpaca/epoch_boundary
+    persistent_workers: true
+- name: ResNet-50-epoch-boundary
+  script: trainers/image_classification_epoch_boundary.py
+  config:
+    model_name: microsoft/resnet-50
+    dataset_name: ILSVRC/imagenet-1k
+    epochs: 3
+    batch_size: 1024
+    num_workers: 8
+    num_batches: -1
+    learning_rate: 2.0e-04
+    cache_dir: /raid/datasets/ILSVRC/imagenet-1k
+    output_dir: /raid/datasets/ILSVRC/imagenet-1k/epoch_boundary
+    persistent_workers: true

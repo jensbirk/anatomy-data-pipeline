@@ -1,0 +1,3 @@
+name: Llama-3.2-1B-batch-32-transfer-workers-4-parquet
+run_id: Llama-3.2-1B-batch-32-transfer-workers-4-parquet_20260320_121557
+script: trainers/llm_finetune_throughput_filetypes.py

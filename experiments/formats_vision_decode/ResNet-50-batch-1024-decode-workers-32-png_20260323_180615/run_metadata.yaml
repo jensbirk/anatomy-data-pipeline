@@ -1,0 +1,3 @@
+name: ImageNet-batch-1024-decode-workers-32-png
+run_id: ImageNet-batch-1024-decode-workers-32-png_20260323_180615
+script: trainers/image_classification_throughput.py

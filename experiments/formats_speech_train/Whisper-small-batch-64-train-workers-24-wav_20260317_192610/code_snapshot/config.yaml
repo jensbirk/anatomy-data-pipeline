@@ -1,0 +1,23 @@
+audio_column: audio
+batch_size: 64
+dataset_config: clean
+dataset_name: librispeech_asr
+dataset_root: /raid/datasets/librispeech/wav
+dataset_type: wav
+epochs: 1
+eval_split: test
+freeze_encoder: false
+language: english
+lr: 1.0e-05
+max_steps: 10
+mode: train
+model_name: openai/whisper-small
+num_batches: -1
+num_workers:
+- 24
+prefetch_factor: 2
+sampling_rate: 16000
+save_model: false
+seed: 42
+text_column: text
+train_split: train.100

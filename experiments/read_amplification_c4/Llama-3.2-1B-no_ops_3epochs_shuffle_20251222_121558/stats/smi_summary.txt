@@ -1,0 +1,16 @@
+Run: Llama-3.2-1B-no_ops_3epochs_shuffle_20251222
+Source: dio/experiments/llm_finetune_no_ops_c4_epochs/Llama-3.2-1B-no_ops_3epochs_shuffle_20251222_121558/logs/smi.csv
+Excluded Start: 0s
+
+--- GPU Statistics ---
+  Analyzed Duration: 134919.79 s
+
+  [Power & Energy]
+  Avg Power Draw:   86.63 W
+  Total Energy:     3246.82 Wh
+
+  [Utilization - Weighted Avg]
+  GPU Util       : 1.00% (Max: 5)
+  Mem Util       : 0.00% (Max: 0)
+  Mem Used (MiB) : 8504 (Max: 8504)
+  Temp (C)       : 41.52% (Max: 47)

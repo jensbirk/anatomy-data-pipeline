@@ -1,0 +1,291 @@
+runs:
+  # - name: SegResNet-batch-4-transfer-workers-0
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SegResNet"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 4
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [0]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  # - name: SegResNet-batch-4-transfer-workers-2
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SegResNet"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 4
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [2]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  # - name: SegResNet-batch-4-transfer-workers-4
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SegResNet"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 4
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [4]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  # - name: SegResNet-batch-4-transfer-workers-8
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SegResNet"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 4
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  # - name: SegResNet-batch-4-transfer-workers-16
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SegResNet"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 4
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [16]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  # - name: SegResNet-batch-4-transfer-workers-24
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SegResNet"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 4
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [24]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  # - name: SegResNet-batch-4-transfer-workers-32
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SegResNet"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 4
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [32]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  # - name: SegResNet-batch-4-transfer-workers-48
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SegResNet"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 4
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [48]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+
+  - name: 3D-UNet-batch-32-transfer-workers-0
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [0]
+      mode: "transfer"
+      cache_dir: "/raid/datasets/brats"
+      output_dir: "/raid/datasets/brats/checkpoints"
+  - name: 3D-UNet-batch-32-transfer-workers-2
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [2]
+      mode: "transfer"
+      cache_dir: "/raid/datasets/brats"
+      output_dir: "/raid/datasets/brats/checkpoints"
+  - name: 3D-UNet-batch-32-transfer-workers-4
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [4]
+      mode: "transfer"
+      cache_dir: "/raid/datasets/brats"
+      output_dir: "/raid/datasets/brats/checkpoints"
+  - name: 3D-UNet-batch-32-transfer-workers-8
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [8]
+      mode: "transfer"
+      cache_dir: "/raid/datasets/brats"
+      output_dir: "/raid/datasets/brats/checkpoints"
+  - name: 3D-UNet-batch-32-transfer-workers-16
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [16]
+      mode: "transfer"
+      cache_dir: "/raid/datasets/brats"
+      output_dir: "/raid/datasets/brats/checkpoints"
+  - name: 3D-UNet-batch-32-transfer-workers-24
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [24]
+      mode: "transfer"
+      cache_dir: "/raid/datasets/brats"
+      output_dir: "/raid/datasets/brats/checkpoints"
+  - name: 3D-UNet-batch-32-transfer-workers-32
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [32]
+      mode: "transfer"
+      cache_dir: "/raid/datasets/brats"
+      output_dir: "/raid/datasets/brats/checkpoints"
+  - name: 3D-UNet-batch-32-transfer-workers-48
+    script: trainers/medical_segmentation_throughput.py
+    config:
+      model: "UNet"
+      task: "Task01_BrainTumour"
+      batch_size: 32
+      epochs: 1
+      num_batches: -1
+      num_workers: [48]
+      mode: "transfer"
+      cache_dir: "/raid/datasets/brats"
+      output_dir: "/raid/datasets/brats/checkpoints"
+
+  # - name: SwinUNETR-batch-1-transfer-workers-0
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SwinUNETR"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 1
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [0]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  # - name: SwinUNETR-batch-1-transfer-workers-2
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SwinUNETR"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 1
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [2]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  # - name: SwinUNETR-batch-1-workers-4
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SwinUNETR"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 1
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [4]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  # - name: SwinUNETR-batch-1-transfer-workers-8
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SwinUNETR"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 1
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [8]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  # - name: SwinUNETR-batch-1-transfer-workers-16
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SwinUNETR"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 1
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [16]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  # - name: SwinUNETR-batch-1-workers-24
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SwinUNETR"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 1
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [24]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  # - name: SwinUNETR-batch-1-transfer-workers-32
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SwinUNETR"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 1
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [32]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"
+  # - name: SwinUNETR-batch-1-transfer-workers-48
+  #   script: trainers/medical_segmentation_throughput.py
+  #   config:
+  #     model: "SwinUNETR"
+  #     task: "Task01_BrainTumour"
+  #     batch_size: 1
+  #     epochs: 1
+  #     num_batches: -1
+  #     num_workers: [48]
+  #     mode: "transfer"
+  #     cache_dir: "/raid/datasets/brats"
+  #     output_dir: "/raid/datasets/brats/checkpoints"

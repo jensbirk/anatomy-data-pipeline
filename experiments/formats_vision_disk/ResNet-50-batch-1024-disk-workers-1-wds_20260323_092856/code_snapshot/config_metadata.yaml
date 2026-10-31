@@ -1,0 +1,19 @@
+timestamp: '2026-03-23T09:29:06.359318+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/formats_img_classfication_disk/ImageNet-batch-1024-disk-workers-1-wds_20260323_092856/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/formats_img_classfication_disk/ImageNet-batch-1024-disk-workers-1-wds_20260323_092856/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/image_classification_throughput.py
+real_log_output: /home/jbia/project-angel/p1/experiments/formats_img_classfication_disk/ImageNet-batch-1024-disk-workers-1-wds_20260323_092856/logs
+config:
+  batch_size: 1024
+  data_dir: /raid/datasets/imagenet-1k/wds
+  dataset_type: webdataset
+  epochs: 1
+  mode: disk
+  model_name: microsoft/resnet-50
+  num_batches: -1
+  num_workers:
+  - 1
+  output_dir: /raid/datasets/ILSVRC/imagenet-1k/checkpoints
+  persistent_workers: true
+  pin_memory: true
+  prefetch_factor: 2

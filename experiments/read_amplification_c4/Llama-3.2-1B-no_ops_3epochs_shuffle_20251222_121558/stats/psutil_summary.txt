@@ -1,0 +1,41 @@
+Run: Llama-3.2-1B-no_ops_3epochs_shuffle_20251222
+Source: dio/experiments/llm_finetune_no_ops_c4_epochs/Llama-3.2-1B-no_ops_3epochs_shuffle_20251222_121558/logs/psutil.csv
+Excluded Start: 0s
+
+--- System & Application Stats ---
+  Analyzed Duration: 134920.15 s
+
+  [CPU Config]
+    Core Count: 48
+
+  [System CPU Usage]
+    Avg: 12.60 | Med: 12.40 | Std: 1.58 %
+    Min: 2.40 | Max: 36.70 %
+
+  [Application CPU Usage]
+    Avg: 391.57 | Med: 393.20 | Std: 27.29 %
+    Min: 1.90 | Max: 535.90 %
+
+  [Application Process Count]
+    Avg: 10.00 | Med: 10.00 | Std: 0.14 
+    Min: 2.00 | Max: 10.00 
+
+  [System Used Memory]
+    Avg: 37450.12 | Med: 36627.36 | Std: 2043.50 MB
+    Min: 4888.19 | Max: 43354.45 MB
+
+  [System Shared Memory]
+    Avg: 31.62 | Med: 31.57 | Std: 1.54 MB
+    Min: 24.09 | Max: 80.41 MB
+
+  [System Buffers]
+    Avg: 7.98 | Med: 7.87 | Std: 1.95 MB
+    Min: 4.60 | Max: 100.39 MB
+
+  [System Cache]
+    Avg: 220749.34 | Med: 221725.30 | Std: 3447.35 MB
+    Min: 926.26 | Max: 227132.16 MB
+
+  [System Swap Usage]
+    Avg: 8178.96 | Med: 8191.78 | Std: 241.78 MB
+    Min: 0.00 | Max: 8192.00 MB

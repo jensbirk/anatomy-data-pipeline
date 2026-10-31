@@ -1,0 +1,33 @@
+# Device write amplification (WAF) of checkpoint writes on Machine 1 (Section 5.2).
+# Llama-3.2-3B, synchronous save every step, 20 timed saves (~360 GiB) to the
+# PM9A3 (/dev/nvme1n1). Read the drive's SMART logs as root before and after:
+#   sudo nvme smart-log /dev/nvme1n1 -o json > smart_before.json
+#   sudo nvme ocp smart-add-log /dev/nvme1n1 -o json > ocp_before.json
+#   make run experiments/waf_nvme
+#   (same two commands with _after)
+# WAF = delta physical media units written (OCP log) / delta host data units written.
+runs:
+- name: Llama-3.2-3B-sync-1-waf
+  script: trainers/llm_finetune_throughput.py
+  config:
+    dataset_name: tatsu-lab/alpaca
+    data_dir: null
+    cache_dir: /raid/datasets/tatsu-lab/alpaca/
+    output_dir: /raid/checkpoints/alpaca
+    epochs: 1
+    mode: train
+    num_batches: 40
+    num_workers: 8
+    max_seq_length: 512
+    lr: 2.0e-06
+    warmup_steps: 0
+    pin_memory: true
+    streaming: false
+    torch_compile: false
+    model_name: meta-llama/Llama-3.2-3B
+    batch_size: 16
+    max_steps: 40
+    save_steps: 1
+    checkpoint_timing: true
+    timing_warmup_steps: 20
+    async_checkpoint: false

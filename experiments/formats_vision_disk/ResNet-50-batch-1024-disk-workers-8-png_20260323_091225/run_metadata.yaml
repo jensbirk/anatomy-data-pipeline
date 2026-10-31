@@ -1,0 +1,3 @@
+name: ImageNet-batch-1024-disk-workers-8-png
+run_id: ImageNet-batch-1024-disk-workers-8-png_20260323_091225
+script: trainers/image_classification_throughput.py

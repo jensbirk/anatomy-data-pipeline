@@ -1,0 +1,3 @@
+name: ResNet-50-sync-10-r1
+run_id: ResNet-50-sync-10-r1_20261019_131818
+script: trainers/image_classification_throughput.py

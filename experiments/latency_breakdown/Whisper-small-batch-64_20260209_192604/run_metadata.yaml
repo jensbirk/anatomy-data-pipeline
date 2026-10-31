@@ -1,0 +1,3 @@
+name: Whisper-small-batch-64
+run_id: Whisper-small-batch-64_20260209_192604
+script: trainers/speech_latency.py

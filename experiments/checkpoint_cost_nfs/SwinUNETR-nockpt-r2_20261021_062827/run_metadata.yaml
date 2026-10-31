@@ -1,0 +1,5 @@
+git_commit: 62d303b5faa737bba2f28cc4f83f7e77018ab55d
+git_dirty: false
+name: SwinUNETR-nockpt-r2
+run_id: SwinUNETR-nockpt-r2_20261021_062827
+script: trainers/medical_segmentation_throughput.py

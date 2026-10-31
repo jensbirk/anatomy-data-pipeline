@@ -1,0 +1,3 @@
+name: ViT-base-nockpt-r2
+run_id: ViT-base-nockpt-r2_20261019_133357
+script: trainers/image_classification_throughput.py

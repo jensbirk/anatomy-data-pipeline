@@ -1,0 +1,16 @@
+timestamp: '2026-02-06T11:39:17.008326+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/medical_segmentation_throughput_preprocess/SegResNet-batch-4-preprocess-workers-32_20260206_113915/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/medical_segmentation_throughput_preprocess/SegResNet-batch-4-preprocess-workers-32_20260206_113915/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/medical_segmentation_throughput.py
+real_log_output: /home/jbia/project-angel/p1/experiments/medical_segmentation_throughput_preprocess/SegResNet-batch-4-preprocess-workers-32_20260206_113915/logs
+config:
+  batch_size: 4
+  cache_dir: /raid/datasets/brats
+  epochs: 1
+  mode: preprocess
+  model: SegResNet
+  num_batches: -1
+  num_workers:
+  - 32
+  output_dir: /raid/datasets/brats/checkpoints
+  task: Task01_BrainTumour

@@ -1,0 +1,5 @@
+git_commit: 85f4d94da999060d553b0318b07c0315e0f9cbe0
+git_dirty: false
+name: Whisper-small-batch-64-transfer-workers-8
+run_id: Whisper-small-batch-64-transfer-workers-8_20261020_112243
+script: trainers/speech_throughput.py

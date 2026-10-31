@@ -1,0 +1,28 @@
+Run: Llama-3.2-1B-no_ops_3epochs_shuffle_20251222
+Source: dio/experiments/llm_finetune_no_ops_c4_epochs/Llama-3.2-1B-no_ops_3epochs_shuffle_20251222_121558/logs/dcgmi.csv
+Excluded Start: 0s
+
+--- GPU ID: GPU 0 ---
+  Analyzed Duration: 134920.24 s
+
+  [Power]
+  Power Usage     : Avg: 86.63 | Med: 86.78 | Std: 0.33 W
+                           Min: 86.04 | Max: 92.56 W
+
+  [Utilization & Activity]
+  GPU Util        : Avg: 1.00 | Med: 1.00 | Std: 0.06 %
+                           Min: 0.00 | Max: 5.00 %
+  Graphics Act    : Avg: 0.00 | Med: 0.00 | Std: 0.00 
+                           Min: 0.00 | Max: 0.00 
+  DRAM Activity   : Avg: 0.00 | Med: 0.00 | Std: 0.00 
+                           Min: 0.00 | Max: 0.00 
+
+  [Compute Pipes]
+
+  [PCIe]
+  Transmit        : 450.46 GB Total
+       Avg: 3.42 | Med: 3.43 | Std: 0.38 MB/s
+       Min: 0.20 | Max: 70.21 MB/s
+  Receive         : 9021.35 GB Total
+       Avg: 68.47 | Med: 68.65 | Std: 8.06 MB/s
+       Min: 0.11 | Max: 1560.97 MB/s

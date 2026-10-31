@@ -1,0 +1,27 @@
+timestamp: '2026-10-19T15:58:09.792234+00:00'
+source_config: /home/jbia/anatomy-data-pipeline-artifact/experiments/checkpoint_cost_nvme/Qwen3-1.7B-sync-10-r2_20261019_155808/config.yaml
+snapshot_path: /home/jbia/anatomy-data-pipeline-artifact/experiments/checkpoint_cost_nvme/Qwen3-1.7B-sync-10-r2_20261019_155808/code_snapshot/config.yaml
+script: /home/jbia/anatomy-data-pipeline-artifact/trainers/llm_finetune_throughput.py
+real_log_output: /home/jbia/anatomy-data-pipeline-artifact/experiments/checkpoint_cost_nvme/Qwen3-1.7B-sync-10-r2_20261019_155808/logs
+config:
+  async_checkpoint: false
+  batch_size: 16
+  cache_dir: /raid/datasets/tatsu-lab/alpaca/
+  checkpoint_timing: true
+  data_dir: null
+  dataset_name: tatsu-lab/alpaca
+  epochs: 1
+  lr: 2.0e-06
+  max_seq_length: 512
+  max_steps: 120
+  mode: train
+  model_name: Qwen/Qwen3-1.7B
+  num_batches: 120
+  num_workers: 8
+  output_dir: /raid/checkpoints/alpaca
+  pin_memory: true
+  save_steps: 10
+  streaming: false
+  timing_warmup_steps: 20
+  torch_compile: false
+  warmup_steps: 0

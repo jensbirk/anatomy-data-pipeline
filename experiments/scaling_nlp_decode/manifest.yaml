@@ -1,0 +1,186 @@
+runs:
+    # Qwen3-1.7B
+  - name: Qwen3-1.7B-batch-16-decode-workers-0
+    script: trainers/pretrain.py
+    config:
+      model_name: Qwen/Qwen3-1.7B
+      data_dir: /raid/datasets/c4/converted/arrow
+      output_dir: /raid/datasets/tatsu-lab/alpaca/checkpoints
+      cache_dir: /raid/datasets/c4/converted/arrow
+      max_steps: 2      
+      batch_size: 16
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [0]
+      mode: "decode" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      on_the_fly_tokenization: true
+  - name: Qwen3-1.7B-batch-16-decode-workers-2
+    script: trainers/pretrain.py
+    config:
+      model_name: Qwen/Qwen3-1.7B
+      data_dir: /raid/datasets/c4/converted/arrow
+      output_dir: /raid/datasets/tatsu-lab/alpaca/checkpoints
+      cache_dir: /raid/datasets/c4/converted/arrow
+      max_steps: 2      
+      batch_size: 16
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [2]
+      mode: "decode" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      on_the_fly_tokenization: true
+  - name: Qwen3-1.7B-batch-16-decode-workers-4
+    script: trainers/pretrain.py
+    config:
+      model_name: Qwen/Qwen3-1.7B
+      data_dir: /raid/datasets/c4/converted/arrow
+      output_dir: /raid/datasets/tatsu-lab/alpaca/checkpoints
+      cache_dir: /raid/datasets/c4/converted/arrow
+      max_steps: 2      
+      batch_size: 16
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [4]
+      mode: "decode" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      on_the_fly_tokenization: true
+  - name: Qwen3-1.7B-batch-16-decode-workers-8
+    script: trainers/pretrain.py
+    config:
+      model_name: Qwen/Qwen3-1.7B
+      data_dir: /raid/datasets/c4/converted/arrow
+      output_dir: /raid/datasets/tatsu-lab/alpaca/checkpoints
+      cache_dir: /raid/datasets/c4/converted/arrow
+      max_steps: 2      
+      batch_size: 16
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [8]
+      mode: "decode" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      on_the_fly_tokenization: true
+  - name: Qwen3-1.7B-batch-16-decode-workers-16
+    script: trainers/pretrain.py
+    config:
+      model_name: Qwen/Qwen3-1.7B
+      data_dir: /raid/datasets/c4/converted/arrow
+      output_dir: /raid/datasets/tatsu-lab/alpaca/checkpoints
+      cache_dir: /raid/datasets/c4/converted/arrow
+      max_steps: 2      
+      batch_size: 16
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [16]
+      mode: "decode" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      on_the_fly_tokenization: true
+  - name: Qwen3-1.7B-batch-16-decode-workers-24
+    script: trainers/pretrain.py
+    config:
+      model_name: Qwen/Qwen3-1.7B
+      data_dir: /raid/datasets/c4/converted/arrow
+      output_dir: /raid/datasets/tatsu-lab/alpaca/checkpoints
+      cache_dir: /raid/datasets/c4/converted/arrow
+      max_steps: 2      
+      batch_size: 16
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [24]
+      mode: "decode" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      on_the_fly_tokenization: true
+  - name: Qwen3-1.7B-batch-16-decode-workers-32
+    script: trainers/pretrain.py
+    config:
+      model_name: Qwen/Qwen3-1.7B
+      data_dir: /raid/datasets/c4/converted/arrow
+      output_dir: /raid/datasets/tatsu-lab/alpaca/checkpoints
+      cache_dir: /raid/datasets/c4/converted/arrow
+      max_steps: 2      
+      batch_size: 16
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [32]
+      mode: "decode" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      on_the_fly_tokenization: true
+  - name: Qwen3-1.7B-batch-16-decode-workers-48
+    script: trainers/pretrain.py
+    config:
+      model_name: Qwen/Qwen3-1.7B
+      data_dir: /raid/datasets/c4/converted/arrow
+      output_dir: /raid/datasets/tatsu-lab/alpaca/checkpoints
+      cache_dir: /raid/datasets/c4/converted/arrow
+      max_steps: 2      
+      batch_size: 16
+      prefetch_factor: 2
+      num_batches: -1  # -1 means all batches
+      num_workers: [48]
+      mode: "decode" 
+      epochs: 1
+      lr: 2.0e-6
+      warmup_steps: 0
+      max_seq_length: 512
+      save_steps: 0
+      save_model: false
+      pin_memory: true
+      streaming: false
+      torch_compile: false
+      on_the_fly_tokenization: true

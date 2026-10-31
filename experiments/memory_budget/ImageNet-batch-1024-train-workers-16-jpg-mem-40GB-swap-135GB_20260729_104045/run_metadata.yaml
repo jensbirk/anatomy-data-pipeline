@@ -1,0 +1,4 @@
+memory_limit_gb: 40
+name: ImageNet-batch-1024-train-workers-16-jpg-mem-40GB-swap-135GB
+run_id: ImageNet-batch-1024-train-workers-16-jpg-mem-40GB-swap-135GB_20260729_104045
+script: trainers/image_classification_throughput.py

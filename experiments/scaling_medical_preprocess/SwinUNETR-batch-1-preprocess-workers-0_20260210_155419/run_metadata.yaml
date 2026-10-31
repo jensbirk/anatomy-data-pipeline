@@ -1,0 +1,3 @@
+name: SwinUNETR-batch-1-preprocess-workers-0
+run_id: SwinUNETR-batch-1-preprocess-workers-0_20260210_155419
+script: trainers/medical_segmentation_throughput.py

@@ -1,0 +1,3 @@
+name: Whisper-small-batch-64-preprocess-workers-0-mp3
+run_id: Whisper-small-batch-64-preprocess-workers-0-mp3_20260320_140023
+script: trainers/speech_throughput.py

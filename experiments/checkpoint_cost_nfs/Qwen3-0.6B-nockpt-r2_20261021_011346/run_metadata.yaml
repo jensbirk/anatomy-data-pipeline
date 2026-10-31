@@ -1,0 +1,5 @@
+git_commit: 62d303b5faa737bba2f28cc4f83f7e77018ab55d
+git_dirty: false
+name: Qwen3-0.6B-nockpt-r2
+run_id: Qwen3-0.6B-nockpt-r2_20261021_011346
+script: trainers/llm_finetune_throughput.py

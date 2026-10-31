@@ -1,0 +1,3 @@
+name: ViT-base-sync-1-r1
+run_id: ViT-base-sync-1-r1_20261019_135025
+script: trainers/image_classification_throughput.py

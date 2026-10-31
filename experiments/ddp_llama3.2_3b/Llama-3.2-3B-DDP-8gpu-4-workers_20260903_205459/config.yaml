@@ -1,0 +1,21 @@
+batch_size: 16
+data_dir: en
+dataset_name: allenai/c4
+epochs: 1
+lr: 2.0e-06
+max_samples: 400000
+max_seq_length: 512
+max_steps: 5000
+mode: train
+model_name: meta-llama/Llama-3.2-3B
+num_batches: -1
+num_gpus: 8
+num_workers:
+- 4
+output_dir: /dcai/users/andjen/checkpoints_ddp
+pin_memory: true
+save_model: false
+save_steps: 0
+streaming: false
+torch_compile: false
+warmup_steps: 0

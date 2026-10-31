@@ -1,0 +1,5 @@
+git_commit: 62d303b5faa737bba2f28cc4f83f7e77018ab55d
+git_dirty: false
+name: ResNet-50-async-10-r3
+run_id: ResNet-50-async-10-r3_20261020_203957
+script: trainers/image_classification_throughput.py

@@ -1,0 +1,2 @@
+num_workers,mode,throughput_samp_s,throughput_mb_s
+4,train,69.3217,2308.0798

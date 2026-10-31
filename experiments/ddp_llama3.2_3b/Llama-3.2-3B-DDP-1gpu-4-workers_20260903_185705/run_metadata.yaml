@@ -1,0 +1,3 @@
+name: Llama-3.2-3B-DDP-1gpu-4-workers
+run_id: Llama-3.2-3B-DDP-1gpu-4-workers_20260903_185705
+script: trainers/llm_ddp_pretrain.py

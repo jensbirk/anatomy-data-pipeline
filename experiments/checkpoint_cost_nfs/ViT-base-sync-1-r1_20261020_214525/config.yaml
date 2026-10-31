@@ -1,0 +1,17 @@
+async_checkpoint: false
+batch_size: 1024
+checkpoint_timing: true
+data_dir: /dtu/p1/jebian/data/train/
+dataset_name: imagenet-1k
+epochs: 1
+max_steps: 30
+mode: train
+model_name: google/vit-base-patch16-224
+num_batches: 30
+num_workers: 8
+output_dir: /dtu/p1/jebian/checkpoints/imagenet
+persistent_workers: true
+pin_memory: true
+prefetch_factor: 2
+save_steps: 1
+timing_warmup_steps: 20

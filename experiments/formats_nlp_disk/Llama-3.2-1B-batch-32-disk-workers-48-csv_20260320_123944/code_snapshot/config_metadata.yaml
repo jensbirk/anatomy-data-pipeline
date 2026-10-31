@@ -1,0 +1,26 @@
+timestamp: '2026-03-20T12:39:44.298453+00:00'
+source_config: /home/jbia/project-angel/p1/experiments/formats_finetuning_disk/Llama-3.2-1B-batch-32-disk-workers-48-csv_20260320_123944/config.yaml
+snapshot_path: /home/jbia/project-angel/p1/experiments/formats_finetuning_disk/Llama-3.2-1B-batch-32-disk-workers-48-csv_20260320_123944/code_snapshot/config.yaml
+script: /home/jbia/project-angel/p1/trainers/llm_finetune_throughput_filetypes.py
+real_log_output: /home/jbia/project-angel/p1/experiments/formats_finetuning_disk/Llama-3.2-1B-batch-32-disk-workers-48-csv_20260320_123944/logs
+config:
+  batch_size: 32
+  data_dir: null
+  dataset_name: /raid/datasets/alpaca/csv/alpaca_data.csv
+  epochs: 1
+  lr: 2.0e-06
+  max_samples: null
+  max_seq_length: 512
+  max_steps: 10
+  mode: disk
+  model_name: meta-llama/Llama-3.2-1B
+  num_batches: -1
+  num_workers:
+  - 48
+  pin_memory: true
+  prefetch_factor: 2
+  save_model: false
+  save_steps: 0
+  streaming: false
+  torch_compile: false
+  warmup_steps: 0

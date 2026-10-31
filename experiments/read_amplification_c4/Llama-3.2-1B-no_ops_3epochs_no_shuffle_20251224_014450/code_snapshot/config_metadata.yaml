@@ -1,0 +1,27 @@
+timestamp: '2025-12-24T10:30:10.939002+00:00'
+source_config: /home/jbia/experiments/no_ops_c4_epochs/Llama-3.2-1B-no_ops_3epochs_no_shuffle_20251224_014450/config.yaml
+snapshot_path: /home/jbia/experiments/no_ops_c4_epochs/Llama-3.2-1B-no_ops_3epochs_no_shuffle_20251224_014450/code_snapshot/config.yaml
+script: /home/jbia/trainers/pretrain.py
+real_log_output: /home/jbia/experiments/no_ops_c4_epochs/Llama-3.2-1B-no_ops_3epochs_no_shuffle_20251224_014450/logs
+config:
+  batch_size: 8
+  data_dir: en
+  dataset_name: allenai/c4
+  epochs: 3
+  force_flush: false
+  force_retokenize: false
+  lr: 2.0e-05
+  max_samples: null
+  max_seq_length: 512
+  max_steps: null
+  model_name: meta-llama/Llama-3.2-1B
+  no_ops: true
+  output_dir: /raid/datasets/allenai/c4/checkpoints
+  pin_memory: true
+  profile: false
+  profile_steps: 10
+  save_model: false
+  save_steps: 0
+  shuffle: false
+  streaming: false
+  warmup_steps: 0

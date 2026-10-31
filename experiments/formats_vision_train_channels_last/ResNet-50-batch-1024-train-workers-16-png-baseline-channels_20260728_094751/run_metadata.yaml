@@ -1,0 +1,3 @@
+name: ResNet-50-batch-1024-train-workers-16-png-baseline-channels
+run_id: ResNet-50-batch-1024-train-workers-16-png-baseline-channels_20260728_094751
+script: trainers/image_classification_throughput.py
